@@ -1,45 +1,179 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# WROCLAW The City Of Dwarfs
 
-Welcome Evka K,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+- [Overview](#overview)
+- [User stories](#user-stories)
+- [UX](#ux)
+- [Features](#features)
+- [Technologies used](#technologies-used)
+- [Resources](#resources)
+- [Testing](#testing)
+- [Code validity](#code-validity)
+- [Version Control](#version-control)
+- [Deployment](#deployment)
+- [Credits](#credits)
+- [Acknowledgments](#acknowledgments)
 
-## Gitpod Reminders
+## Demo
+---
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+## Overview
+---
+-
+-
+-
+---
 
-A blue button should appear to click: *Make Public*,
+## User stories
+-
+-
+-
+----
+## UX
+---
 
-Another blue button should appear to click: *Open Browser*.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+**1. Strategy**
+-
+-
+-
 
-A blue button should appear to click: *Make Public*,
+ 
+### Project purpose:
+-
+-
+-
 
-Another blue button should appear to click: *Open Browser*.
+### Site owner goals:
+-
+-
+-
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Customer Goals:
+-
+-
+-
 
-## Updates Since The Instructional Video
+**2. Scope**
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+-
+-
+-
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+**3. Structure**
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+-
+-
+-
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+**4. Skeleton**
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Wireframe mockups:
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+---
+**5. Surface**
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+**Colors**
 
---------
+ 
 
-Happy coding!
+
+ **Typography**
+
+
+
+
+ **Images**
+
+---
+## Features
+
+**Existing Features**
+
+-
+-
+-
+
+
+**Features Left to Implement when skills develop**
+
+Another feature idea
+- 
+
+---
+
+## Technologies Used
+
+
+**1. Languages**
+
+
+
+**2. Integrations**
+
+
+**3. Workspace, version control and Repository storage**
+
+
+**4. Other**
+
+
+**5. IDE Extensions used in GitPod**
+
+
+---
+## Resources
+- 
+---
+## Testing
+- Click [here](TESTING.md) for the full testing process.
+
+Overview
+- [Encountered Issues](TESTING.md#encounteredissues)
+- [Code Validation](TESTING.md#code-validation)
+- [Testing User stories](TESTING.md#testing-user-stories)
+- [Testing Functionality](TESTING.md#testing-functionality)
+- [Testing Compatibility](TESTING.md#testing-compatibility)
+- [Testing Accessibility](TESTING.md#testing-accessibility)
+- [Testing Performance](TESTING.md#testing-performance)
+- [Further Testing](TESTING.md#further-testing)
+
+---
+## Code validity
+
+---
+
+## Version Control
+
+---
+
+## Deployment
+
+### **GitHub Pages**
+
+
+### **To fork the GitHub Repository**
+
+### **To make a Local Clone**
+
+---
+
+## Credits
+---
+
+**Media**
+
+
+**Content**
+
+
+**Code Snippets**
+
+
+## Acknowledgments
+
+I would like to thank:
+
+
