@@ -69,10 +69,7 @@ h3 {
     content: "\f0c9";
     font-size: 1.5rem;
     }
-}
-.fa-bars:hover {
-    color: red;
-}
+
 .navbar-text {
     padding-bottom: 0px;
     padding-left: 3px;
@@ -82,7 +79,7 @@ h3 {
 /*----------------HOME PAGE------------------*/
 .home-container {
       /* ---------- Credit Photo by Bronislaw Drozka from Pixabay ----------*/
-    background: url('../images/hero-image.jpg') no-repeat bottom center fixed;
+    background: url('../images/hero-image.jpg') no-repeat bottom center;
     background-color: gray;
     background-size: cover;
     min-height: 100vh;
@@ -114,8 +111,38 @@ h3 {
     font-family: 'Just Another Hand', cursive;
 }
 
-
-
+/*-----------------FOOTER------------------*/
+footer {
+    background-color:black;
+    bottom:0px;
+    height: 3.5rem;
+    display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	    -webkit-box-align: center;
+	    -ms-flex-align: center;
+	align-items: center;
+    position: relative;
+    z-index: 1030;
+}
+.social-links-item {
+    display: inline-block;
+    padding-left:25px;
+    padding-right:25px;  
+    list-style: none;  
+}
+.social-links-item i {
+    font-size: 1.5rem;
+    color:white;
+  
+}
+.social-links-item i:hover {
+    color:red;
+}
+.social-links {
+    padding-left:0;
+	
+}
 
 /*---------Media for Large Devices----------*/
 @media screen and (min-width:540px){
@@ -130,6 +157,9 @@ h3 {
     .fa-bars::before {
         font-size: 2rem;
         padding-left: 0px;
+    }
+    .fa-bars:hover {
+        color: red;
     }
     .navbar-text {
         font-size: 2.1rem;
@@ -149,7 +179,6 @@ h3 {
         letter-spacing: 3px;
     }
 }
-
 @media screen and (min-width:763px){
     .welcome-sign {
         width: 60%;
