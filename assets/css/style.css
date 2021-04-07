@@ -13,16 +13,19 @@ body {
 h1 {
     font-family: 'Just Another Hand', cursive;
 }
-
+h3 {
+    color:#f4f4f6;
+    font-size:1.3rem;
+}
 /*----------------NAVIGATION------------------*/
 .logo {
-    width: 40px;
+    width: 30px;
     height: auto;
     margin-right: 3px;
     padding-bottom: 6px;
 }
 .logo:hover {
-    width: 43px;
+    width: 33px;
     height: auto;
 }
 .navbar {
@@ -31,14 +34,17 @@ h1 {
 .navbar-brand {
     font-family: 'Just Another Hand', cursive;
     color: white;
-    font-size: 3rem;
-    margin-right: 3px;
+    font-size: 1.8rem;
+    margin-right: 0px;
 }
 .navbar-brand:hover {
     color: red;
 }
 .navbar-toggler {
-    color: white;  
+    color: white; 
+    padding-right: 0px; 
+    padding-left: 5px;
+     
 }
 #navbarNav {
     -webkit-box-pack: end;
@@ -61,7 +67,8 @@ h1 {
 }
 .fa-bars::before {
     content: "\f0c9";
-    font-size: 2rem;
+    font-size: 1.5rem;
+    }
 }
 .fa-bars:hover {
     color: red;
@@ -69,11 +76,12 @@ h1 {
 .navbar-text {
     padding-bottom: 0px;
     padding-left: 3px;
-    font-size: 2.6rem;
+    font-size: 1.2rem;
 }
 
 /*----------------HOME PAGE------------------*/
 .home-container {
+      /* ---------- Credit Photo by Bronislaw Drozka from Pixabay ----------*/
     background: url('../images/hero-image.jpg') no-repeat bottom center fixed;
     background-color: gray;
     background-size: cover;
@@ -91,42 +99,65 @@ h1 {
             justify-content: center;
 }
 
-
-
-
-
-
-/*---------Media for Small Devices----------*/
-@media screen and (max-width:360px){
-
-.navbar-text {
-    font-size: 1.2rem;
-}
-.navbar-brand {
-    font-size: 1.8rem;
- 
-    margin-right: 0px;
-}
-.fa-bars::before {
-    font-size: 1.5rem;
-}
-.navbar-toggler{    
-padding-left: 5px;
-    padding-right: 0px; 
-}
+.welcome-sign {
+    width: 95%;
+    background-color: #000000c2; 
+    border-radius:0.3rem; 
+    padding-bottom: 22px;
+    padding-top: 22px;
+    margin-bottom: 0px;
+  }
+.welcome-text {
+    line-height: 1.2;
+    font-size: 2.1rem;
+    letter-spacing: 2px;
+    font-family: 'Just Another Hand', cursive;
 }
 
-@media screen and (max-width:498px){
+
+
+
+/*---------Media for Large Devices----------*/
+@media screen and (min-width:540px){
+    .navbar-text {
+        font-size: 2.6rem;
+    }
+    .navbar-brand {
+        font-size: 2.8rem;
+        letter-spacing: 1px;
+        margin-right: 0px;
+    }
+    .fa-bars::before {
+        font-size: 2rem;
+        padding-left: 0px;
+    }
+    .navbar-text {
+        font-size: 2.1rem;
+        letter-spacing: 1px;
+    }
     .logo {
-    padding-bottom: 0px;
+        width: 40px;
+    }
+    .logo:hover {
+        width: 43px;
+    }
+    .welcome-sign {
+        width: 70%;
+    }
+    .welcome-text {
+        font-size: 2.6rem;
+        letter-spacing: 3px;
+    }
 }
-.navbar-brand {
-    font-size: 2rem;
-    padding-bottom: 0px;
-    margin-right: 0px;
+
+@media screen and (min-width:763px){
+    .welcome-sign {
+        width: 60%;
+    }
 }
-.navbar-text {
-    padding-bottom: 0px;
-      font-size: 1.2rem;
-}
-}
+ @media screen and (min-width:992px) {
+    .welcome-sign {
+        width: 40%;
+    }
+ }  
+   
