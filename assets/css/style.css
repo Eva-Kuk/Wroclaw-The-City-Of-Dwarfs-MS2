@@ -5,10 +5,13 @@
     padding: 0;
     border: 0;
 }
+html, body {
+    height: 100%;
+}
 body {
     font-family: 'Lato', sans-serif;
     font-size: 1.1rem;
-    background-color: rgb(218, 197, 197);
+    background-color: #c7c7d1;
 }
 h1 {
     font-family: 'Just Another Hand', cursive;
@@ -44,7 +47,6 @@ h3 {
     color: white; 
     padding-right: 0px; 
     padding-left: 5px;
-     
 }
 #navbarNav {
     -webkit-box-pack: end;
@@ -65,11 +67,11 @@ h3 {
     color: white;
     background-color: thistle;
 }
+
 .fa-bars::before {
     content: "\f0c9";
     font-size: 1.5rem;
     }
-
 .navbar-text {
     padding-bottom: 0px;
     padding-left: 3px;
@@ -80,7 +82,7 @@ h3 {
 .home-container {
       /* ---------- Credit Photo by Bronislaw Drozka from Pixabay ----------*/
     background: url('../images/hero-image.jpg') no-repeat bottom center;
-    background-color: gray;
+    background-color: rgb(218, 197, 197);
     background-size: cover;
     min-height: 100vh;
     width: 100%;
@@ -95,7 +97,6 @@ h3 {
         -ms-flex-pack: center;
             justify-content: center;
 }
-
 .welcome-sign {
     width: 95%;
     background-color: #000000c2; 
@@ -109,6 +110,61 @@ h3 {
     font-size: 2.1rem;
     letter-spacing: 2px;
     font-family: 'Just Another Hand', cursive;
+}
+
+/*-----------------ATTRACTIONS PAGE------------------*/
+.heading {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+}
+.heading-style {
+    margin-top: 8px;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+}
+.image-attractions {
+    background-image: url('../images/wroclaw-roof2.jpg');
+    height: 200px;
+}
+.section-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#map {
+    height: 400px;
+    width: 100%; 
+}
+.map-buttons{
+    width: 100%;
+    min-height: 200px;
+    margin-bottom: 7px;
+    display: grid;  
+}
+.btn-success {
+    color: black;
+    background-color:red;
+    border: 1px solid black;
+    border-radius: 0.25rem;
+    margin-bottom: 0.3rem;
+    margin-top: 0.3rem;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: 80%;
+    justify-self: center;
+}
+.btn-success:hover {
+    color: black;
+    background-color:white;
+    border-color:black;
+}
+.btn span {
+    font-size: 0.9rem;
+}
+.dwarf-icon {
+    width: 25px;
+    height: auto;
 }
 
 /*-----------------FOOTER------------------*/
@@ -134,14 +190,12 @@ footer {
 .social-links-item i {
     font-size: 1.5rem;
     color:white;
-  
 }
 .social-links-item i:hover {
     color:red;
 }
 .social-links {
     padding-left:0;
-	
 }
 
 /*---------Media for Large Devices----------*/
@@ -178,15 +232,42 @@ footer {
         font-size: 2.6rem;
         letter-spacing: 3px;
     }
+    .heading-style {
+        font-size: 3.5rem;
+    }
+    .image-attractions {
+     height: 300px;
+    }
+    .map-buttons{
+    width:80%;
+    min-height: 200px; 
+    }
+    .btn span {
+    font-size: 1.2rem;
+}
 }
 @media screen and (min-width:763px){
     .welcome-sign {
         width: 60%;
+    }
+      .map-buttons{
+    width:70%;
+    min-height: 200px; 
     }
 }
  @media screen and (min-width:992px) {
     .welcome-sign {
         width: 40%;
     }
+    .map-buttons{
+    width:65%;
+    min-height: 200px; 
+    }
  }  
    
+ @media screen and (min-width:1200px) {
+    .map-buttons{
+    width:50%;
+    min-height: 200px; 
+    }
+ }  
