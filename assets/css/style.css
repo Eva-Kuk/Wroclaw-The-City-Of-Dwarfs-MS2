@@ -20,6 +20,11 @@ h3 {
     color:#f4f4f6;
     font-size:1.3rem;
 }
+h2 {
+    font-size:1.2rem ;
+    text-transform: uppercase;
+    font-weight: 600;
+}
 /*----------------NAVIGATION------------------*/
 .logo {
     width: 30px;
@@ -111,20 +116,39 @@ h3 {
     letter-spacing: 2px;
     font-family: 'Just Another Hand', cursive;
 }
+/*-----------------ABOUT PAGE------------------*/
+#about {
+    height: auto;
+}
+.img-dwarf {
+    width: 250px;
+    height: auto;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.image-content {
+  align-items: center;
+}
 
 /*-----------------ATTRACTIONS PAGE------------------*/
+#attractions {
+    height: auto;
+}
+
 .heading {
-    margin-top: 8px;
+    margin-top: 16px;
     display: flex;
     justify-content: center;
 }
 .heading-style {
     margin-top: 8px;
-    font-size: 2.5rem;
+    font-size: 3rem;
     letter-spacing: 3px;
 }
 .image-attractions {
-    background-image: url('../images/wroclaw-roof2.jpg');
+     /*----CREDIT: CREDIT: Photo by studio500 from Pixaby----*/
+    background-image: url('../images/wroclaw-roof.jpg');
     height: 200px;
 }
 .section-image {
@@ -133,7 +157,7 @@ h3 {
     background-size: cover;
 }
 #map {
-    height: 400px;
+   height: 400px;
     width: 100%; 
 }
 .map-buttons{
@@ -147,13 +171,13 @@ h3 {
     background-color:red;
     border: 1px solid black;
     border-radius: 0.25rem;
-    margin-bottom: 0.3rem;
-    margin-top: 0.3rem;
+    margin-bottom: 0.25rem;
+    margin-top: 0.25rem;
     padding-top: 0px;
     padding-bottom: 0px;
     width: 80%;
     justify-self: center;
-}
+ }
 .btn-success:hover {
     color: black;
     background-color:white;
@@ -163,10 +187,22 @@ h3 {
     font-size: 0.9rem;
 }
 .dwarf-icon {
-    width: 25px;
+    width: 30px;
     height: auto;
 }
-
+.width-size {
+    width: 100%;
+}
+/*-----------------Contact Us  PAGE------------------*/
+#contact {
+    height: 100vh;
+}
+.image-contact {
+    /*----CREDIT: CREDIT: Photo by Eveline de Bruin from Pixaby----*/
+    background-image: url('../images/three-dwarfs.jpg');
+    height: 200px;
+    width: auto;
+}
 /*-----------------FOOTER------------------*/
 footer {
     background-color:black;
@@ -233,41 +269,46 @@ footer {
         letter-spacing: 3px;
     }
     .heading-style {
-        font-size: 3.5rem;
+        font-size: 4rem;
     }
-    .image-attractions {
-     height: 300px;
+    .image-attractions,
+    .image-contact
+    {
+        height: 300px;
     }
     .map-buttons{
-    width:80%;
-    min-height: 200px; 
+        width:80%;
+        min-height: 200px; 
     }
     .btn span {
-    font-size: 1.2rem;
-}
+        font-size: 1.2rem;
+    }
+    .img-dwarf { 
+    width: 300px;
+    }
 }
 @media screen and (min-width:763px){
     .welcome-sign {
         width: 60%;
-    }
-      .map-buttons{
-    width:70%;
-    min-height: 200px; 
     }
 }
  @media screen and (min-width:992px) {
     .welcome-sign {
         width: 40%;
     }
-    .map-buttons{
-    width:65%;
-    min-height: 200px; 
-    }
  }  
    
- @media screen and (min-width:1200px) {
+ @media screen and (min-width:910px) {
     .map-buttons{
-    width:50%;
-    min-height: 200px; 
+        width:30%;
+        min-height: 200px; 
     }
+    .width-size {
+        width: 65%;
+        padding-right: 20px;
+    }
+    .btn-success {
+        margin-bottom: 1.2rem;
+        margin-top: 1.2rem;
+ }
  }  
