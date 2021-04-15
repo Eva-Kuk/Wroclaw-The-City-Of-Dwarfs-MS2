@@ -16,8 +16,14 @@
 
 **Project Bugs And solutions**
 ---
--
--
+While working on this project I encountered the following problems which I tried to solve in the following way:
+
+1. When I tried to connect the buttons to the API map, the btn-dwarfs button showed 10 errors in the dev tool. The error appeared in an array where the lengths and widths were incorrectly defined, instead of specifying lat and lng as an object had an additional location parameter that was not defined as specified in the code
+- SOLUTION: removing the location: property from the array
+![altdwarfsbuttonissue](wireframes/testing/dwarf-button-devtool-errors.png)
+![altdwarfsbuttonissue](wireframes/testing/dwarf-markers.png)
+
+
 -
 
 ## Code Validation

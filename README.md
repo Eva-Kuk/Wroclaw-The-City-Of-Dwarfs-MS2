@@ -17,7 +17,6 @@
 ## Demo
 ---
 
-
 ## Overview
 ---
 - This is my second Milestone 2 project which is part of the Code Isntitute's FullStack Software Development Diploma Course. This project demonstrates the skills and knowledge of using the HTML5, CSS, Javascript and API with an additional framework Bootstrap and library jQuery in Interactive frontend Development module which I have learned recently on the course.
@@ -213,10 +212,13 @@ This site uses .....
 
 ---
 ## Resources
--
--
--
--
+- [Tripadvisor](https://www.tripadvisor.ie/) - resourse for Accomodation and FOOD and Drinks in Attractions section
+- [google.com/travel](https://www.google.com/travel/hotels/Wroc%C5%82aw) - resourse for Attractions section
+- [Podroze po europie](https://www.podrozepoeuropie.pl/ostrow-tumski-wroclaw/) - polish website tor the information about the attractions in the city
+- [Wikipedia](https://en.wikipedia.org) - resourse for information about the attractions in Wroclaw 
+- [Wikipedia/dwarfs](https://pl.wikipedia.org/wiki/Wroc%C5%82awskie_krasnale) - resourse about dwarfs localizations
+- [Visit Wroclaw](https://visitwroclaw.eu/en) - polish website for the attracion secion content
+- [Kolejkowo ](https://kolejkowo.pl/) - polish website for the attracion section.
 - [Colors](https://coolors.co/) - color schemes generator.
 - [Contrasr checker](https://webaim.org/resources/contrastchecker/) -contrast color checker
 - [TinyPNG](https://tinypng.com/) - Efficient compression of images for site.
@@ -285,7 +287,9 @@ Change the current working directory to the location where you want the cloned d
 ---
 
 ## Credits
----
+- [Flaticon](https://www.flaticon.com/) - database of free icons used  for the dwarf icon for buttons.
+- [Visit Wroclaw](https://visitwroclaw.eu/en) - content for the attractions section markers
+- [turystyka dla studenta](https://turystyka.dlastudenta.pl/miejscowosc/Wroclaw/Opis/ca42-1-1.html#:~:text=Wroc%C5%82aw%2C%20stolica%20Dolnego%20%C5%9Al%C4%85ska%2C%20jest,wpisana%20jest%20w%20jego%20mury.) - content for the attraction section about Wroclaw
 
 **Media**
 

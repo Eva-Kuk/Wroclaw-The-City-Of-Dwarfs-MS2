@@ -187,7 +187,7 @@ new MarkerClusterer(AccomodationMap, markers, {
 document.getElementById("btn-dwarfs").addEventListener("click",initMapDwarfs);
 function initMapDwarfs() {
     var dwarfsMap = new google.maps.Map(document.getElementById("map"), {
-        zoom: 13,
+        zoom: 15,
         center: {lat:51.1079, lng:17.0385},
     });
 
@@ -196,43 +196,43 @@ var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 var dwarfsMarkers = [
     {
-        location: {lat:51.1092, lng:17.0320}, 
+       lat:51.1092, lng:17.0320, 
     
     },
     {
-        location: {lat:51.1100, lng:17.0312}, 
+        lat:51.1100, lng:17.0312, 
       
     },
     {
-        location: {lat:51.1094, lng:17.0304}, 
+        lat:51.1094, lng:17.0304, 
    
     },
     {
-        location: {lat:51.1095, lng:17.0305}, 
+        lat:51.1095, lng:17.0305, 
  
     },
     {
-        location: {lat:51.1083, lng:17.0362}, 
+        lat:51.1083, lng:17.0362, 
       
     },
     {
-        location: {lat:51.1083, lng:17.0262}, 
+        lat:51.1083, lng:17.0262, 
 
     },
     {
-        location: {lat:51.1083, lng:17.0354}, 
+       lat:51.1083, lng:17.0354, 
        
     },
     {
-        location: {lat:51.1105, lng:17.0260}, 
-      
-    },
-    {
-        location: {lat:51.1114, lng:17.0292}, 
+        lat:51.1105, lng:17.0260, 
     
     },
     {
-        location: {lat:51.1128, lng:17.0323}, 
+         lat:51.1114, lng:17.0292, 
+    
+    },
+    {
+        lat:51.1128, lng:17.0323, 
        
     }
 ];
