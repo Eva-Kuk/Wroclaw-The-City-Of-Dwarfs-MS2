@@ -203,6 +203,29 @@ h2 {
     height: 200px;
     width: auto;
 }
+.form-control{
+    margin: 0.50rem;
+}
+.btn-primary {
+    color: black;
+    background-color:red;
+    border: 1px solid black;
+    border-radius: 0.25rem;
+    margin-bottom: 0.25rem;
+    margin-top: 0.25rem;
+   
+    justify-self: center;
+ }
+.btn-primary:hover {
+    color: black;
+    background-color:white;
+    border-color:black;
+}
+.padding-margin {
+    padding-left: 0px;
+    padding-right: 17px;
+    margin-bottom:80px;
+}
 /*-----------------FOOTER------------------*/
 footer {
     background-color:black;
