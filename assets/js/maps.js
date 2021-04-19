@@ -176,7 +176,7 @@ var marker =  new google.maps.Marker({
     google.maps.event.addListener(marker, 'click', function() {
         infowidow.setContent(foodDrinksMarkers.info);
         infowidow.open(foodDrinksMap, marker);
-    })
+    });
     return marker;
 });
 
@@ -185,11 +185,11 @@ var marker = new MarkerClusterer(foodDrinksMap, markers, {
             "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
 });
 }
-/*
-// accomodation button
+
+//Add the map of Wroclaw with locations of the FoodDrinks when pressed on the button 'Food&Drinks'
 document.getElementById("btn-accomodation").addEventListener("click",initMapAccomodation);
 function initMapAccomodation() {
-    var AccomodationMap = new google.maps.Map(document.getElementById("map"), {
+    var accomodationMap = new google.maps.Map(document.getElementById("map"), {
         zoom: 14,
         center: {lat:51.1079, lng:17.0385},
     });
@@ -199,52 +199,63 @@ var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 var accomodationMarkers = [
     {
-        lat:51.1092, lng:17.0377, 
-        
+        location: {lat:51.1092, lng:17.0377}, 
+        info:"<h5>Hotel LOTHUS</h5><p>Functional accomodations in a strinking stone hotel with a sophisticated</p>"
     },
     {
-        lat:51.1160, lng:17.0406, 
-  
+        location: {lat:51.1160, lng:17.0406}, 
+        info:"<h5>Hotel TUMSKI</h5><p> Grand hotel dating from 1885, with free breakfast & an adjacent barge housing a restaurant and pub</p>"
     },
     {
-        lat:51.0985, lng:17.0242, 
-      
+        location: {lat:51.0985, lng:17.0242}, 
+        info:"<h5>IBIS Wroclaw Centrum</h5><p>Laid-back hotel offering bright rooms & 24-hour bar</p>"
     },
     {
-        lat:51.1173, lng:17.0358, 
-       
+        location: {lat:51.1173, lng:17.0358}, 
+        info:"<h5>Hotel HP Park PLAZA</h5><p>Polished riverfront lodging with a  spa and a terrace, as well as an upscale restaurant and a lobby bar</p>"
     },
     {
-        lat:51.1061, lng:17.0313, 
-        
+        location: {lat:51.1061, lng:17.0313}, 
+        info:"<h5>Hotel MONOPOL</h5><p>Luxe hotel offering a trendy rooftop restaurant, free breakfast and a spa with an indoor pool</p>"
     },
     {
-        lat:51.1091, lng:17.0343, 
-       
+        location: {lat:51.1091, lng:17.0343}, 
+        info:"<h5>QUBUS Hotel Wrocław</h5><p>Bright rooms and polished suites in a modern hotel with an airy European restaurant, a bar and a sauna.</p>"
     },
     {
-        lat:51.1014, lng:17.0279, 
-     
+        location: {lat:51.1014, lng:17.0279}, 
+        info:"<h5>SCANDIC WROCLAW</h5><p>The hotel is conveniently located in central Wrocław, Eco-certified, offers air-conditioned rooms with a flat-screen TV, a mini-bar and free WiFi.</p>"
     },
     {
-        lat:51.1080, lng:17.0249, 
-
+        location: {lat:51.1080, lng:17.0249}, 
+        info:"<h5>PURO Wroclaw Stare Miasto</h5><p>   </p>"
     },
     {
-        lat:51.1086, lng:17.0391, 
- 
-    }
+        location: {lat:51.1080, lng:17.0249}, 
+        info:"<h5></h5><p>PURO Wrocław Stare Miasto is conveniently located in the very center of Wrocław, just 500 m from the Old Market Square.</p>"
+    },
+    {
+        location: {lat:51.1086, lng:17.0391}, 
+        info:"<h5>MERCURE Wroclaw Centrum</h5><p>The contemporary hotel with a redbrick and glass facade 10-minute walk from Wrocław Town Hall</p>"
+    },
 ];
+// add click listener to each marker which opens the InfoWindow with accomodationMarkers info
+//<!--CREDIT: solution for Integrate Google Maps MarkerClusterer with infowindow from stackoverflow
+var infowindow = new google.maps.InfoWindow();
 
-
-var markers = accomodationMarkers.map(function (location, i) {
-    return new google.maps.Marker({
-        position:location,
+var markers = accomodationMarkers.map(function (accomodationMarkers, i) {
+var marker = new google.maps.Marker({
+        position:accomodationMarkers.location,
         label: labels[i % labels.length]
     });
+     google.maps.event.addListener(marker, 'click', function(evt) {
+            infowindow.setContent(accomodationMarkers.info);
+            infowindow.open(accomodationMap, marker);
+})
+return marker;
 });
 
-new MarkerClusterer(AccomodationMap, markers, {
+new MarkerClusterer(accomodationMap, markers, {
     imagePath:
             "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
 });
@@ -320,49 +331,8 @@ new MarkerClusterer(dwarfsMap, markers, {
 }
 
 
+/*
 
-var acomodationMarkers = [
-    {
-        location: {lat:51.1092, lng:17.0377}, 
-        info:"<h5>Hotel LOTHUS</h5><p>Functional accomodations in a strinking stone hotel with a sophisticated</p>"
-    },
-    {
-        location: {lat:51.1160, lng:17.0406}, 
-        info:"<h5>Hotel TUMSKI</h5><p> Grand hotel dating from 1885, with free breakfast & an adjacent barge housing a restaurant and pub</p>"
-    },
-    {
-        location: {lat:51.0985, lng:17.0242}, 
-        info:"<h5>IBIS Wroclaw Centrum</h5><p>Laid-back hotel offering bright rooms & 24-hour bar</p>"
-    },
-    {
-        location: {lat:51.1173, lng:17.0358}, 
-        info:"<h5>Hotel HP Park PLAZA</h5><p>Polished riverfront lodging with a  spa and a terrace, as well as an upscale restaurant and a lobby bar</p>"
-    },
-    {
-        location: {lat:51.1061, lng:17.0313}, 
-        info:"<h5>Hotel MONOPOL</h5><p>Luxe hotel offering a trendy rooftop restaurant, free breakfast and a spa with an indoor pool</p>"
-    },
-    {
-        location: {lat:51.1091, lng:17.0343}, 
-        info:"<h5>QUBUS Hotel Wrocław</h5><p>Bright rooms and polished suites in a modern hotel with an airy European restaurant, a bar and a sauna.</p>"
-    },
-    {
-        location: {lat:51.1014, lng:17.0279}, 
-        info:"<h5>SCANDIC WROCLAW</h5><p>The hotel is conveniently located in central Wrocław, Eco-certified, offers air-conditioned rooms with a flat-screen TV, a mini-bar and free WiFi.</p>"
-    },
-    {
-        location: {lat:51.1080, lng:17.0249}, 
-        info:"<h5>PURO Wroclaw Stare Miasto</h5><p>   </p>"
-    },
-    {
-        location: {lat:51.1080, lng:17.0249}, 
-        info:"<h5></h5><p>PURO Wrocław Stare Miasto is conveniently located in the very center of Wrocław, just 500 m from the Old Market Square.</p>"
-    },
-    {
-        location: {lat:51.1086, lng:17.0391}, 
-        info:"<h5>MERCURE Wroclaw Centrum</h5><p>The contemporary hotel with a redbrick and glass facade 10-minute walk from Wrocław Town Hall</p>"
-    },
-]
 
 
 
