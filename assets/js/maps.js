@@ -121,6 +121,7 @@ function initMapfoodDrinks() {
     });
 
 var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
  // Add markers to foodDrinksMarkers Array
 let foodDrinksMarkers = [
     {
@@ -186,7 +187,7 @@ var marker = new MarkerClusterer(foodDrinksMap, markers, {
 });
 }
 
-//Add the map of Wroclaw with locations of the FoodDrinks when pressed on the button 'Food&Drinks'
+//Add the map of Wroclaw with locations of the accomodation when pressed on the button 'Accomodation'
 document.getElementById("btn-accomodation").addEventListener("click",initMapAccomodation);
 function initMapAccomodation() {
     var accomodationMap = new google.maps.Map(document.getElementById("map"), {
@@ -194,75 +195,74 @@ function initMapAccomodation() {
         center: {lat:51.1079, lng:17.0385},
     });
 
+    var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    // Add markers to accomodationMarkers Array
+    var accomodationMarkers = [
+        {
+            location: {lat:51.1092, lng:17.0377}, 
+            info:"<h5>Hotel LOTHUS</h5><p>Functional accomodations in a strinking stone hotel with a sophisticated</p>"
+        },
+        {
+            location: {lat:51.1160, lng:17.0406}, 
+            info:"<h5>Hotel TUMSKI</h5><p> Grand hotel dating from 1885, with free breakfast & an adjacent barge housing a restaurant and pub</p>"
+        },
+        {
+            location: {lat:51.0985, lng:17.0242}, 
+            info:"<h5>IBIS Wroclaw Centrum</h5><p>Laid-back hotel offering bright rooms & 24-hour bar</p>"
+        },
+        {
+            location: {lat:51.1173, lng:17.0358}, 
+            info:"<h5>Hotel HP Park PLAZA</h5><p>Polished riverfront lodging with a  spa and a terrace, as well as an upscale restaurant and a lobby bar</p>"
+        },
+        {
+            location: {lat:51.1061, lng:17.0313}, 
+            info:"<h5>Hotel MONOPOL</h5><p>Luxe hotel offering a trendy rooftop restaurant, free breakfast and a spa with an indoor pool</p>"
+        },
+        {
+            location: {lat:51.1091, lng:17.0343}, 
+            info:"<h5>QUBUS Hotel Wrocław</h5><p>Bright rooms and polished suites in a modern hotel with an airy European restaurant, a bar and a sauna.</p>"
+        },
+        {
+            location: {lat:51.1014, lng:17.0279}, 
+            info:"<h5>SCANDIC WROCLAW</h5><p>The hotel is conveniently located in central Wrocław, Eco-certified, offers air-conditioned rooms with a flat-screen TV, a mini-bar and free WiFi.</p>"
+        },
+        {
+            location: {lat:51.1080, lng:17.0249}, 
+            info:"<h5>PURO Wroclaw Stare Miasto</h5><p>   </p>"
+        },
+        {
+            location: {lat:51.1080, lng:17.0249}, 
+            info:"<h5></h5><p>PURO Wrocław Stare Miasto is conveniently located in the very center of Wrocław, just 500 m from the Old Market Square.</p>"
+        },
+        {
+            location: {lat:51.1086, lng:17.0391}, 
+            info:"<h5>MERCURE Wroclaw Centrum</h5><p>The contemporary hotel with a redbrick and glass facade 10-minute walk from Wrocław Town Hall</p>"
+        },
+    ];
+    // add click listener to each marker which opens the InfoWindow with accomodationMarkers info
+    //<!--CREDIT: solution for Integrate Google Maps MarkerClusterer with infowindow from stackoverflow
+    var infowindow = new google.maps.InfoWindow();
 
-var accomodationMarkers = [
-    {
-        location: {lat:51.1092, lng:17.0377}, 
-        info:"<h5>Hotel LOTHUS</h5><p>Functional accomodations in a strinking stone hotel with a sophisticated</p>"
-    },
-    {
-        location: {lat:51.1160, lng:17.0406}, 
-        info:"<h5>Hotel TUMSKI</h5><p> Grand hotel dating from 1885, with free breakfast & an adjacent barge housing a restaurant and pub</p>"
-    },
-    {
-        location: {lat:51.0985, lng:17.0242}, 
-        info:"<h5>IBIS Wroclaw Centrum</h5><p>Laid-back hotel offering bright rooms & 24-hour bar</p>"
-    },
-    {
-        location: {lat:51.1173, lng:17.0358}, 
-        info:"<h5>Hotel HP Park PLAZA</h5><p>Polished riverfront lodging with a  spa and a terrace, as well as an upscale restaurant and a lobby bar</p>"
-    },
-    {
-        location: {lat:51.1061, lng:17.0313}, 
-        info:"<h5>Hotel MONOPOL</h5><p>Luxe hotel offering a trendy rooftop restaurant, free breakfast and a spa with an indoor pool</p>"
-    },
-    {
-        location: {lat:51.1091, lng:17.0343}, 
-        info:"<h5>QUBUS Hotel Wrocław</h5><p>Bright rooms and polished suites in a modern hotel with an airy European restaurant, a bar and a sauna.</p>"
-    },
-    {
-        location: {lat:51.1014, lng:17.0279}, 
-        info:"<h5>SCANDIC WROCLAW</h5><p>The hotel is conveniently located in central Wrocław, Eco-certified, offers air-conditioned rooms with a flat-screen TV, a mini-bar and free WiFi.</p>"
-    },
-    {
-        location: {lat:51.1080, lng:17.0249}, 
-        info:"<h5>PURO Wroclaw Stare Miasto</h5><p>   </p>"
-    },
-    {
-        location: {lat:51.1080, lng:17.0249}, 
-        info:"<h5></h5><p>PURO Wrocław Stare Miasto is conveniently located in the very center of Wrocław, just 500 m from the Old Market Square.</p>"
-    },
-    {
-        location: {lat:51.1086, lng:17.0391}, 
-        info:"<h5>MERCURE Wroclaw Centrum</h5><p>The contemporary hotel with a redbrick and glass facade 10-minute walk from Wrocław Town Hall</p>"
-    },
-];
-// add click listener to each marker which opens the InfoWindow with accomodationMarkers info
-//<!--CREDIT: solution for Integrate Google Maps MarkerClusterer with infowindow from stackoverflow
-var infowindow = new google.maps.InfoWindow();
-
-var markers = accomodationMarkers.map(function (accomodationMarkers, i) {
-var marker = new google.maps.Marker({
-        position:accomodationMarkers.location,
-        label: labels[i % labels.length]
+    var markers = accomodationMarkers.map(function (accomodationMarkers, i) {
+    var marker = new google.maps.Marker({
+            position:accomodationMarkers.location,
+            label: labels[i % labels.length]
+        });
+        google.maps.event.addListener(marker, 'click', function(evt) {
+                infowindow.setContent(accomodationMarkers.info);
+                infowindow.open(accomodationMap, marker);
     });
-     google.maps.event.addListener(marker, 'click', function(evt) {
-            infowindow.setContent(accomodationMarkers.info);
-            infowindow.open(accomodationMap, marker);
-})
-return marker;
-});
+    return marker;
+    });
 
-new MarkerClusterer(accomodationMap, markers, {
-    imagePath:
-            "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-});
+    new MarkerClusterer(accomodationMap, markers, {
+        imagePath:
+                "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
+    });
 }
 
-// dwarfs button
-
+//Add the map of Wroclaw with locations of the attractions when pressed on the button 'Attractions'
 document.getElementById("btn-dwarfs").addEventListener("click",initMapDwarfs);
 function initMapDwarfs() {
     var dwarfsMap = new google.maps.Map(document.getElementById("map"), {
@@ -270,122 +270,78 @@ function initMapDwarfs() {
         center: {lat:51.1079, lng:17.0385},
     });
 
+    var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    // Add markers to dwarfsMarkers Array
+    var dwarfsMarkers = [
+        {
+            location: {lat:51.109661, lng:17.031686}, 
+            info:"<h5>Deaf, Blind man, W-Skers </h5><p>Three disabled dwarfs, who are ambassadors of the campaign 'Wroclaw without borders', which promotes making Wroclaw a city friendly for disabled people.</p>"
+        },
+        {
+            location: {lat:51.109167, lng:17.067436}, 
+            info:"<h5>Surgeon</h5><p>The surgeon is practicing at the Medical Academy. He has a difficult specialization and his hands are full. Operating on dwarfs is a real challenge. Imagine, for example, how thin the stitching thread must be! In fact, he should be called a microsurgeon.</p>"
+        },
+        {
+            location: {lat:51.109056, lng:17.026528}, 
+            info:"<h5>Younger cinema lover</h5><p>A lover of film art, traveling the world in search of pearls of world cinema. His hiking trail is marked by the largest film festivals.</p>"
+        },
+        {
+            location: {lat:51.108694, lng:17.033}, 
+            info:"<h5>Korpokrasnal</h5><p>'Corpo-Dwarf', he is a dwarf from a large corporation who spends days and nights at the computer to please his employers.</p>"
+        },
+        {
+            location: {lat:51.106456, lng:17.027083}, 
+            info:"<h5>Dwarfs of the Wrocław Philharmonic</h5><p>An orchestra of 21 dwarfs which are a very musical creatures. They are hardworking guys, and they work best when there is music.</p>"
+        },
+        {
+            location: {lat:51.109572, lng:17.034533}, 
+            info:"<h5>Motorcyclist</h5><p>This dwarf steadily drives his vehicle with one hand, and with the other he greets passing drivers and passers-by. The first motorized dwarf in our city, a devoted friend of all lovers of riding on two wheels.</p>"
+        },
+        {
+            location: {lat:51.107175, lng:17.031997}, 
+            info:"<h5>Papa Dwarf</h5><p>Papa Dwarf is the first dwarf that appeared in Wroclaw on June 1, 2001. The most eminent dwarf inhabitant of Wrocław. In the old days, an active participant in social life and politically involved activist of the Orange Alternative. Today, on a well-deserved retirement, he is the leader of Wrocław dwarfs. Chairman of the Wrocław Dwarf Council.</p>"
+        },
+        {
+            location: {lat:51.111136, lng:17.030742}, 
+            info:"<h5>WrocLovek</h5><p>He is a lover of Wrocław who infects all dwarfs with his love for Wrocław, and who greets tourists with a big smile</p>"
+        },
+        {
+            location: {lat:51.108928, lng:17.032869}, 
+            info:"<h5>Syzyfki </h5><p> Pusher Lifting the ball are the most popular, very hardworking and a bit unbright dwarfs in the city who feel the need to help other people, but they went to work in a slightly ... unusual way.</p>"
+        },
+        {
+            location: {lat:51.110733, lng:17.033558}, 
+            info:"<h5>Croissant</h5><p>This dwarf is located next to the newly established Bakery-Restaurant 'Mr Croissant'.</p>"
+        },
+        {
+            location: {lat:51.112667, lng:17.041944}, 
+            info:"<h5>ParkM</h5><p>   </p>"
+        },
+        {
+            location: {lat:51.116303, lng:17.047167}, 
+            info:"<h5>Ogorzałek and Filek</h5><p>These two dwarfs, regardless of the prohibitions in the city - pour booze and drink it, officially.</p>"
+        },
 
-var dwarfsMarkers = [
-    {
-       lat:51.1092, lng:17.0320, 
-    
-    },
-    {
-        lat:51.1100, lng:17.0312, 
-      
-    },
-    {
-        lat:51.1094, lng:17.0304, 
-   
-    },
-    {
-        lat:51.1095, lng:17.0305, 
- 
-    },
-    {
-        lat:51.1083, lng:17.0362, 
-      
-    },
-    {
-        lat:51.1083, lng:17.0262, 
+    ];
+    //add click listener to each marker which opens the InfoWindow with dwarfsMarkers info
+    //<!--CREDIT: solution for Integrate Google Maps MarkerClusterer with infowindow from stackoverflow
+            var infowindow = new google.maps.InfoWindow();
 
-    },
-    {
-       lat:51.1083, lng:17.0354, 
-       
-    },
-    {
-        lat:51.1105, lng:17.0260, 
-    
-    },
-    {
-         lat:51.1114, lng:17.0292, 
-    
-    },
-    {
-        lat:51.1128, lng:17.0323, 
-       
-    }
-];
-
-
-var markers = dwarfsMarkers.map(function (location, i) {
-    return new google.maps.Marker({
-        position:location,
-        label: labels[i % labels.length]
+    var markers = dwarfsMarkers.map(function (dwarfsMarkers, i) {
+        var marker = new google.maps.Marker({
+            position:dwarfsMarkers.location,
+            label: labels[i % labels.length]
+        });
+        google.maps.event.addListener(marker, 'click', function(evt) {
+                infowindow.setContent(dwarfsMarkers.info);
+                infowindow.open(dwarfsMap, marker);
+        });
+        return marker;
     });
-});
 
-new MarkerClusterer(dwarfsMap, markers, {
-    imagePath:
-            "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-});
+    new MarkerClusterer(dwarfsMap, markers, {
+        imagePath:
+                "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
+    });
 }
-
-
-/*
-
-
-
-
-
-var dwarfsMarkers = [
-    {
-        location: {lat:51.109661, lng:17.031686}, 
-        info:"<h5>Deaf, Blind man, W-Skers </h5><p>Three disabled dwarfs, who are ambassadors of the campaign 'Wroclaw without borders', which promotes making Wroclaw a city friendly for disabled people.</p>"
-    },
-    {
-        location: {lat:51.109167, lng:17.067436}, 
-        info:"<h5>Surgeon</h5><p>The surgeon is practicing at the Medical Academy. He has a difficult specialization and his hands are full. Operating on dwarfs is a real challenge. Imagine, for example, how thin the stitching thread must be! In fact, he should be called a microsurgeon.</p>"
-    },
-    {
-        location: {lat:51.109056, lng:17.026528}, 
-        info:"<h5>Younger cinema lover</h5><p>A lover of film art, traveling the world in search of pearls of world cinema. His hiking trail is marked by the largest film festivals.</p>"
-    },
-    {
-        location: {lat:51.108694, lng:17.033}, 
-        info:"<h5>Korpokrasnal</h5><p>'Corpo-Dwarf', he is a dwarf from a large corporation who spends days and nights at the computer to please his employers.</p>"
-    },
-    {
-        location: {lat:51.106456, lng:17.027083}, 
-        info:"<h5>Dwarfs of the Wrocław Philharmonic</h5><p>An orchestra of 21 dwarfs which are a very musical creatures. They are hardworking guys, and they work best when there is music.</p>"
-    },
-    {
-        location: {lat:51.109572, lng:17.034533}, 
-        info:"<h5>Motorcyclist</h5><p>This dwarf steadily drives his vehicle with one hand, and with the other he greets passing drivers and passers-by. The first motorized dwarf in our city, a devoted friend of all lovers of riding on two wheels.</p>"
-    },
-    {
-        location: {lat:51.107175, lng:17.031997}, 
-        info:"<h5>Papa Dwarf</h5><p>Papa Dwarf is the first dwarf that appeared in Wroclaw on June 1, 2001. The most eminent dwarf inhabitant of Wrocław. In the old days, an active participant in social life and politically involved activist of the Orange Alternative. Today, on a well-deserved retirement, he is the leader of Wrocław dwarfs. Chairman of the Wrocław Dwarf Council.</p>"
-    },
-    {
-        location: {lat:51.111136, lng:17.030742}, 
-        info:"<h5>WrocLovek</h5><p>He is a lover of Wrocław who infects all dwarfs with his love for Wrocław, and who greets tourists with a big smile</p>"
-    },
-    {
-        location: {lat:51.108928, lng:17.032869}, 
-        info:"<h5>Syzyfki </h5><p> Pusher Lifting the ball are the most popular, very hardworking and a bit unbright dwarfs in the city who feel the need to help other people, but they went to work in a slightly ... unusual way.</p>"
-    },
-    {
-        location: {lat:51.110733, lng:17.033558}, 
-        info:"<h5>Croissant</h5><p>This dwarf is located next to the newly established Bakery-Restaurant 'Mr Croissant'.</p>"
-    },
-     {
-        location: {lat:51.112667, lng:17.041944}, 
-        info:"<h5>ParkM</h5><p>   </p>"
-    },
-     {
-        location: {lat:51.116303, lng:17.047167}, 
-        info:"<h5>Ogorzałek and Filek</h5><p>These two dwarfs, regardless of the prohibitions in the city - pour booze and drink it, officially.</p>"
-    },
-
-]
-*/
