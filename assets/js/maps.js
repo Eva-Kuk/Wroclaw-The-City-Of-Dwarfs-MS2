@@ -1,61 +1,121 @@
-    /* CREDIT: Google map documantation used and customized link:https://developers.google.com/maps/documentation
-    /*Create a map to display the location of the city of Wrocław*/
+/* CREDIT: Google map documentation used and customized link:https://developers.google.com/maps/documentation*/
+    
 
-
-//SECOND OPTION attraction button
+//Add the map of Poland
 function initMap(){
 
     var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 13,
-        center: {lat:51.1079, lng:17.0385},
+        zoom: 5,
+        center: {lat:52.237049, lng:21.017532},
     });
-}
+// Add the location marker of Wroclaw on the map
+    var marker = new google.maps.Marker({
+        position: {lat:51.1079, lng:17.0385},
+        map:map
+    });
 
-//Display locations of attractions on the map
+// Add the info of Wroclaw on the map
+    var infoWindow = new google.maps.InfoWindow({
+        content:'<h4>Wroclaw</h4>',
+    });
+
+    marker.addListener('mouseover', () => {
+        infoWindow.open(map, marker);
+    });
+
+}
+//Add the map of Wroclaw with locations of the attractions when pressed on the button 'Attractions'
 document.getElementById("btn-attractions").addEventListener("click",initMapAttractions);
 function initMapAttractions() {
-    var AttractionsMap = new google.maps.Map(document.getElementById("map"), {
-        zoom: 13,
+    var attractionsMap = new google.maps.Map(document.getElementById("map"), {
+        zoom: 14,
         center: {lat:51.1079, lng:17.0385},
     });
 
+    var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//Add markers to attractionsMarkers Array
+    let attractionsMarkers = [
+        {
+            location: {lat:51.1008, lng:17.0300}, 
+            info:"<h5>Capitol</h5><p>The Capitol Musical Theater offers entertainment and bold reflection</p>"
+        },
+        {
+            location: {lat:51.1044, lng:17.0752}, 
+            info:"<h5>Wrocław Africarium</h5><p>Spacious zoo with exhibits of 1,000 animals and a large oceanarium with around 5,000 animals.</p>",
+        },
+        {
+            location: {lat:51.1101, lng:17.0443}, 
+            info:"<h5>Panorama of the Battle of Raclawice</h5><p>The Monumental cycloramic painting depicting the Battle of Racławice, during the Kościuszko Uprising.</p>",
+        },
+        {
+            location: {lat:51.1142, lng:17.0466}, 
+            info:"<h5>Cathedral of St. John the Baptist</h5><p> The cathedral, located in the Ostrów Tumski district, is a Gothic church with Neo-Gothic additions </p>"
+        },
+        {
+            location: {lat:51.1088, lng:17.0789}, 
+            info:"<h5> Wrocław Multimedia Fountain</h5><p>The multimedia musical fountain and ornamental pond, runs only during the summer season </p>"
+        },
+        {
+            location: {lat:51.0945, lng:17.0196}, 
+            info:"<h5>Kolejkowo</h5><p> Artistic venue featuring a range of detailed miniature worlds with model trains & local landmarks.</p>"
+        },
+        {
+            location: {lat:51.1055, lng:17.0320}, 
+            info:"<h5>The Wrocław Opera</h5><p>The opera house was opened in 1841 and up to 1945 was named after the city's then German name, Oper Breslau</p>"
+        },
+        {
+            location: {lat:51.1137, lng:17.0334}, 
+            info:"<h5>Museum of the University of Wroclaw</h5><p>The museum in  displaying many of the amazing historical objects: Aula Leopoldina, Oratorium Marianum,  Mathematical Tower</p>"
+        },
+        {
+            location: {lat:51.1098, lng:17.0327}, 
+            info:"<h5>Market Square</h5><p> The square is rectangular with the dimensions. It is one of the largest market squares in Europe, with the largest two city halls in the country.</p>"
+        },
+        {
+            location: {lat: 51.0897, lng:17.0172}, 
+            info:"<h5>Sky Tower Viewpoint</h5><p> Sky Tower is a skyscraper with the view point of Wroclaw on the top 49th floor in 1 minute with the lift.</p>"
+        },
+        {
+            location: {lat:51.1042, lng:17.0566}, 
+            info:"<h5>Hydropolis</h5><p>The Hydropolis Centre for Ecological Education, is a science centre dedicated to water. Its exhibitions use a variety of technology about the role of water in the environment.</p>"
+        },
+        {
+            location: {lat:51.1145, lng:17.0467}, 
+            info:"<h5>Ostrów Tumski</h5><p>The oldest, historic part of Wrocław, full of monuments, museums and beautiful flora that you can admire in the Botanical Garden.</p>"
+        },
+        {
+            location: {lat:51.1079, lng:17.0289}, 
+            info:"<h5>The City Museum of Wroclaw</h5><p> The Royal Palace is a palace in Wrocław, Poland. Originally a palace of the Prussian monarchy, it now houses the city museum.  </p>"
+        },
+    ];
+// add click listener to each marker which opens the InfoWindow with attractionsMarkers info
+        var infowindow = new google.maps.InfoWindow();
 
-var attractionsMarkers = [
-        {lat:51.1008, lng:17.0300},
-        {lat:51.1044, lng:17.0752},
-        {lat:51.1101, lng:17.0443},
-        {lat:51.1142, lng:17.0466},       
-        {lat:51.1088, lng:17.0789},
-        {lat:51.0945, lng:17.0196},
-        {lat:51.1055, lng:17.0320},
-        {lat:51.1137, lng:17.0334},
-        {lat:51.1098, lng:17.0327},
-        {lat:51.0897, lng:17.0172},
-        {lat:51.1042, lng:17.0566},
-        {lat:51.1145, lng:17.0467},
-        {lat:51.1079, lng:17.0289}
-        ];
+        var markers = attractionsMarkers.map(function (attractionsMarkers, i) {
+        var marker = new google.maps.Marker({
+            position:attractionsMarkers.location,
+            label: labels[i % labels.length]
+        });
+        google.maps.event.addListener(marker, 'click', function(evt) {
+            infowindow.setContent(attractionsMarkers.info);
+            infowindow.open(attractionsMap, marker);
+        })
+        return marker;
 
-
-var markers = attractionsMarkers.map(function (location, i) {
-    return new google.maps.Marker({
-        position:location,
-        label: labels[i % labels.length]
     });
-});
 
-new MarkerClusterer(AttractionsMap, markers, {
-    imagePath:
-            "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-});
+    var markerCluster = new MarkerClusterer(attractionsMap, markers, {
+        imagePath:
+                "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
+    });
 }
+
  // restaurants button
 document.getElementById("btn-restaurants").addEventListener("click",initMapRestaurants);
 function initMapRestaurants() {
     var RestaurantsMap = new google.maps.Map(document.getElementById("map"), {
-        zoom: 13,
+        zoom: 14,
         center: {lat:51.1079, lng:17.0385},
     });
 
@@ -122,7 +182,7 @@ new MarkerClusterer(RestaurantsMap, markers, {
 document.getElementById("btn-accomodation").addEventListener("click",initMapAccomodation);
 function initMapAccomodation() {
     var AccomodationMap = new google.maps.Map(document.getElementById("map"), {
-        zoom: 13,
+        zoom: 14,
         center: {lat:51.1079, lng:17.0385},
     });
 
@@ -187,7 +247,7 @@ new MarkerClusterer(AccomodationMap, markers, {
 document.getElementById("btn-dwarfs").addEventListener("click",initMapDwarfs);
 function initMapDwarfs() {
     var dwarfsMap = new google.maps.Map(document.getElementById("map"), {
-        zoom: 15,
+        zoom: 14,
         center: {lat:51.1079, lng:17.0385},
     });
 
@@ -253,49 +313,81 @@ new MarkerClusterer(dwarfsMap, markers, {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 /*
 var attractionsMarkers = [
-   
-];
-
-var accomodationMarkers = [
+    {
+        location: {lat:51.1008, lng:17.0300}, 
+        info:"<h5>Capitol</h5><p>The Capitol Musical Theater offers entertainment and bold reflection</p>"
+    },
+    {
+        location: {lat:51.1044, lng:17.0752}, 
+        info:"<h5>Wrocław Africarium</h5><p>Spacious zoo with exhibits of 1,000 animals and a large oceanarium with around 5,000 animals.</p>",
+    },
+    {
+        location: {lat:51.1101, lng:17.0443}, 
+        info:"<h5>Panorama of the Battle of Raclawice</h5><p>The Monumental cycloramic painting depicting the Battle of Racławice, during the Kościuszko Uprising.</p>",
+    },
+    {
+        location: {lat:51.1142, lng:17.0466}, 
+        info:"<h5>Cathedral of St. John the Baptist</h5><p> The cathedral, located in the Ostrów Tumski district, is a Gothic church with Neo-Gothic additions </p>"
+    },
+    {
+        location: {lat:51.1088, lng:17.0789}, 
+        info:"<h5> Wrocław Multimedia Fountain</h5><p>The multimedia musical fountain and ornamental pond, runs only during the summer season </p>"
+    },
+    {
+        location: {lat:51.0945, lng:17.0196}, 
+        info:"<h5>Kolejkowo</h5><p> Artistic venue featuring a range of detailed miniature worlds with model trains & local landmarks.</p>"
+    },
+    {
+        location: {lat:51.1055, lng:17.0320}, 
+        info:"<h5>The Wrocław Opera</h5><p>The opera house was opened in 1841 and up to 1945 was named after the city's then German name, Oper Breslau</p>"
+    },
+    {
+        location: {lat:51.1137, lng:17.0334}, 
+        info:"<h5>Museum of the University of Wroclaw</h5><p>The museum in  displaying many of the amazing historical objects: Aula Leopoldina, Oratorium Marianum,  Mathematical Tower</p>"
+    },
+    {
+        location: {lat:51.1098, lng:17.0327}, 
+        info:"<h5>Market Square</h5><p> The square is rectangular with the dimensions. It is one of the largest market squares in Europe, with the largest two city halls in the country.</p>"
+    },
+    {
+        location: {lat: 51.0897, lng:17.0172}, 
+        info:"<h5>Sky Tower Viewpoint</h5><p> Sky Tower is a skyscraper with the view point of Wroclaw on the top 49th floor in 1 minute with the lift.</p>"
+    },
+    {
+        location: {lat:51.1042, lng:17.0566}, 
+        info:"<h5>Hydropolis</h5><p>The Hydropolis Centre for Ecological Education, is a science centre dedicated to water. Its exhibitions use a variety of technology about the role of water in the environment.</p>"
+    },
+    {
+        location: {lat:51.1145, lng:17.0467}, 
+        info:"<h5>Ostrów Tumski</h5><p>The oldest, historic part of Wrocław, full of monuments, museums and beautiful flora that you can admire in the Botanical Garden.</p>"
+    },
+    {
+        location: {lat:51.1079, lng:17.0289}, 
+        info:"<h5>The City Museum of Wroclaw</h5><p> The Royal Palace is a palace in Wrocław, Poland. Originally a palace of the Prussian monarchy, it now houses the city museum.  </p>"
+    },
+]
+var acomodationMarkers = [
     {
         location: {lat:51.1092, lng:17.0377}, 
-        info:"<h5>Hotel LOTHUS</h5><p>Functional accomodations in a strinking stone hotel with a sophisticated.</p>"
+        info:"<h5>Hotel LOTHUS</h5><p>Functional accomodations in a strinking stone hotel with a sophisticated</p>"
     },
     {
         location: {lat:51.1160, lng:17.0406}, 
-        info:"<h5>Hotel TUMSKI</h5><p> Grand hotel dating from 1885, with free breakfast & an adjacent barge housing a restaurant and pub.</p>"
+        info:"<h5>Hotel TUMSKI</h5><p> Grand hotel dating from 1885, with free breakfast & an adjacent barge housing a restaurant and pub</p>"
     },
     {
         location: {lat:51.0985, lng:17.0242}, 
-        info:"<h5>IBIS Wroclaw Centrum</h5><p>Laid-back hotel offering bright rooms & 24-hour bar.</p>"
+        info:"<h5>IBIS Wroclaw Centrum</h5><p>Laid-back hotel offering bright rooms & 24-hour bar</p>"
     },
     {
         location: {lat:51.1173, lng:17.0358}, 
-        info:"<h5>Hotel HP Park PLAZA</h5><p>Polished riverfront lodging with a  spa and a terrace, as well as an upscale restaurant and a lobby bar.</p>"
+        info:"<h5>Hotel HP Park PLAZA</h5><p>Polished riverfront lodging with a  spa and a terrace, as well as an upscale restaurant and a lobby bar</p>"
     },
     {
         location: {lat:51.1061, lng:17.0313}, 
-        info:"<h5>Hotel MONOPOL</h5><p>Luxe hotel offering a trendy rooftop restaurant, free breakfast and a spa with an indoor pool.</p>"
+        info:"<h5>Hotel MONOPOL</h5><p>Luxe hotel offering a trendy rooftop restaurant, free breakfast and a spa with an indoor pool</p>"
     },
     {
         location: {lat:51.1091, lng:17.0343}, 
@@ -307,19 +399,23 @@ var accomodationMarkers = [
     },
     {
         location: {lat:51.1080, lng:17.0249}, 
+        info:"<h5>PURO Wroclaw Stare Miasto</h5><p>   </p>"
+    },
+    {
+        location: {lat:51.1080, lng:17.0249}, 
         info:"<h5></h5><p>PURO Wrocław Stare Miasto is conveniently located in the very center of Wrocław, just 500 m from the Old Market Square.</p>"
     },
     {
         location: {lat:51.1086, lng:17.0391}, 
-        info:"<h5>MERCURE Wroclaw Centrum</h5><p>The contemporary hotel with a redbrick and glass facade 10-minute walk from Wrocław Town Hall.</p>"
-    }
-];
+        info:"<h5>MERCURE Wroclaw Centrum</h5><p>The contemporary hotel with a redbrick and glass facade 10-minute walk from Wrocław Town Hall</p>"
+    },
+]
 
 
-var  restaurantsMarkers = [
+var  = foodDrinksMarkers [
     {
         location: {lat:51.1092, lng:17.0320}, 
-        info: "<h5>Whiskey in the Jar</h5><p> Unique place, high-class steakhouse, offering beefsteaks of highest value, prepared on lava grill.</p>"
+        info: "<h5>Whiskey in the Jar</h5><p> Unique place, high-class steakhouse, offering beefsteaks of highest value, prepared on lava grill</p>"
     },
     {
         location: {lat:51.1100, lng:17.0312}, 
@@ -339,7 +435,7 @@ var  restaurantsMarkers = [
     },
     {
         location: {lat:51.1083, lng:17.0262}, 
-        info:"<h5>Ślepy Zaułek</h5><p>Bar & restaurant in secluded Pasaż Pokoyhof. In the menu there are lunches, burgers and grilled dishes, Italian, Mediterranean and vegetarian cuisine.</p>"
+        info:"<h5>Ślepy Zaułek</h5><p>Bar & restaurant in secluded Pasaż Pokoyhof. In the menu there are lunches, burgers and grilled dishes, Italian, Mediterranean and vegetarian cuisine</p>"
     },
     {
         location: {lat:51.1083, lng:17.0354}, 
@@ -351,13 +447,13 @@ var  restaurantsMarkers = [
     },
     {
         location: {lat:51.1114, lng:17.0292}, 
-        info:"<h5>Ambasada Bar</h5><p>Ambasada is a place in the heart of the city centre, where the trails of people from Wrocław and tourists exploring party side of Wrocław cross each other. The place serves simple dishes and affordable drinks.</p>"
+        info:"<h5>Ambasada Bar</h5><p>Ambasada is a place in the heart of the city centre, where the trails of people from Wrocław and tourists exploring party side of Wrocław cross each other. The place serves simple dishes and affordable drinks</p>"
     },
     {
         location: {lat:51.1128, lng:17.0323}, 
-        info:"<h5>Kociołek bar&grill</h5><p> The speciality of Kociołek bar&grill are the meals from oven, meat, fish, vegetable dishes.</p>"
-    }
-];
+        info:"<h5>Kociołek bar&grill</h5><p> The speciality of Kociołek bar&grill are the meals from oven, meat, fish, vegetable dishes.  </p>"
+    },
+]
 
 var dwarfsMarkers = [
     {
@@ -390,7 +486,7 @@ var dwarfsMarkers = [
     },
     {
         location: {lat:51.111136, lng:17.030742}, 
-        info:"<h5>WrocLovek</h5><p>He is a lover of Wrocław who infects all dwarfs with his love for Wrocław, and who greets tourists with a big smile.</p>"
+        info:"<h5>WrocLovek</h5><p>He is a lover of Wrocław who infects all dwarfs with his love for Wrocław, and who greets tourists with a big smile</p>"
     },
     {
         location: {lat:51.108928, lng:17.032869}, 
@@ -402,13 +498,12 @@ var dwarfsMarkers = [
     },
      {
         location: {lat:51.112667, lng:17.041944}, 
-        info:"<h5>ParkM</h5><p>If it weren't for him, the boulevard wouldn't look as beautiful as it does now. Keep an eye out for him - he's riding there on his excavator!</p>"
+        info:"<h5>ParkM</h5><p>   </p>"
     },
      {
         location: {lat:51.116303, lng:17.047167}, 
         info:"<h5>Ogorzałek and Filek</h5><p>These two dwarfs, regardless of the prohibitions in the city - pour booze and drink it, officially.</p>"
-    }
+    },
 
-];
-
+]
 */

@@ -212,6 +212,10 @@ This site uses .....
 
 ---
 ## Resources
+
+
+
+- [Stock Free Images](https://www.stockfreeimages.com/87864301/Papa-Krasnal-gnome.html) resourse for images (papa dwarf) 
 - [Tripadvisor](https://www.tripadvisor.ie/) - resourse for Accomodation and FOOD and Drinks in Attractions section
 - [google.com/travel](https://www.google.com/travel/hotels/Wroc%C5%82aw) - resourse for Attractions section
 - [Podroze po europie](https://www.podrozepoeuropie.pl/ostrow-tumski-wroclaw/) - polish website tor the information about the attractions in the city
@@ -287,6 +291,7 @@ Change the current working directory to the location where you want the cloned d
 ---
 
 ## Credits
+- [stackoverflow](https://stackoverflow.com/questions/40047210/integrate-google-maps-markerclusterer-with-infowindow) - solution how to integrate google maps MarkerCluster with infowindow
 - [Flaticon](https://www.flaticon.com/) - database of free icons used  for the dwarf icon for buttons.
 - [Visit Wroclaw](https://visitwroclaw.eu/en) - content for the attractions section markers
 - [turystyka dla studenta](https://turystyka.dlastudenta.pl/miejscowosc/Wroclaw/Opis/ca42-1-1.html#:~:text=Wroc%C5%82aw%2C%20stolica%20Dolnego%20%C5%9Al%C4%85ska%2C%20jest,wpisana%20jest%20w%20jego%20mury.) - content for the attraction section about Wroclaw
