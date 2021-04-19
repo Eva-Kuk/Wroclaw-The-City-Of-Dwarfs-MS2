@@ -20,6 +20,14 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
     <!--  -->
+    <!-- code for email.js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_3uFdTl6QXt05h7FETE10Q");
+        })();
+    </script>
+    <!-- -->
 </head>
 
 <body>
@@ -121,7 +129,8 @@
                 <div class="col-12 col-lg-6 text-content">
                     <h2>Little story about Dwarf's</h2>
                     <p> Some call them gnomes or leprechauns, others just call them dwarfs...
-                        A meeting with Wrocław dwarfs can be the beginning of a great adventure. The world of gnomes has a rich history. Let's get to know them up close.
+                        A meeting with Wrocław dwarfs can be the beginning of a great adventure. The world of gnomes has
+                        a rich history. Let's get to know them up close.
                     </p>
                     <p>
                         Historians, journalists and ordinary residents of
@@ -197,23 +206,27 @@
             <h1 class="heading-style">Contact</h1>
         </div>
         <div class="container contact-text d-flex justify-content-center">
-            <p>Would you like to get more information or need help in organizing a trip to Wroclaw, please contact us, we will be happy to help. </p>
+            <p>Would you like to get more information or need help in organizing a trip to Wroclaw, please contact us,
+                we will be happy to help. </p>
         </div>
         <div class="container">
             <div class="row d-flex justify-content-center pl-0">
                 <div class="col-12 col-lg-6 padding-margin">
-                    <form id="contactForm">
-                    <input type="text" name="name" id="fullname" class="form-control" placeholder="Your Full Name" required>
+                    <form onsubmit="return sendMail(this);" id="contactForm">
+                        <input type="text" name="name" id="fullname" class="form-control" placeholder="Your Full Name"
+                            required>
 
-                    <input type="email" name="email" id="emailaddress" class="form-control" placeholder="Email Address" required>
+                        <input type="email" name="email" id="emailaddress" class="form-control"
+                            placeholder="Email Address" required>
 
-                    <textarea rows="10" name="message" id="message" class="form-control" placeholder="Your Message Here..." required></textarea> 
-                   
+                        <textarea rows="10" name="message" id="message" class="form-control"
+                            placeholder="Your Message Here..." required></textarea>
 
-                    <div class="form-button">
-                        <button type="submit" id="send-button" class="form-control btn-primary">Send</button>
-                    </div>
-                     </form>
+
+                        <div class="form-button">
+                            <button type="submit" id="send-button" class="form-control btn-primary">Send</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -259,6 +272,7 @@
         async></script>
 
     <script src="assets/js/maps.js"></script>
+    <script src="assets/js/sendEmail.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 
