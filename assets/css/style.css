@@ -25,6 +25,10 @@ h2 {
     text-transform: uppercase;
     font-weight: 600;
 }
+h4 {
+    font-family: 'Just Another Hand', cursive;
+    font-size: 1,3rem;
+}
 /*----------------NAVIGATION------------------*/
 .logo {
     width: 30px;
@@ -130,6 +134,43 @@ h2 {
 .image-content {
   align-items: center;
 }
+/*---------------ABOUT PAGE - GALLERY----------------*/
+/*CREDIT:*/
+#gallery-container{
+    background-color: white;
+    position: relative;
+    height: 340px; 
+    overflow: hidden;
+    margin-bottom: 5rem;
+}
+
+#gallery{
+    position: relative;
+    width: max-content;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.gallery-row{
+    display: block;
+    position: relative;
+    animation:linear infinite;
+    animation-name: scroll;
+    animation-duration: 80s;
+}
+
+#gallery img{
+    height: 160px;
+    width: auto;
+    padding: 5px;
+}
+
+@keyframes scroll {  /* Code sourced from Stack Overflow (https://stackoverflow.com/questions/41587802/css-animation-from-left-to-right) */
+    0% {right: 0%;}
+    50%{right : 50%;}
+    100%{right: 0%;}
+} 
 
 /*-----------------ATTRACTIONS PAGE------------------*/
 #attractions {
@@ -183,6 +224,12 @@ h2 {
     background-color:white;
     border-color:black;
 }
+.btn-success:focus {
+    color: black;
+    background-color:white;
+    border-color:black;
+    box-shadow: 0 0 0 0.25rem rgb(0 0 0 / 27%);
+}
 .btn span {
     font-size: 0.9rem;
 }
@@ -206,6 +253,11 @@ h2 {
 .form-control{
     margin: 0.50rem;
 }
+
+.form-control:focus {
+    box-shadow: none;
+}
+
 .btn-primary {
     color: black;
     background-color:red;
@@ -213,14 +265,25 @@ h2 {
     border-radius: 0.25rem;
     margin-bottom: 0.25rem;
     margin-top: 0.25rem;
-   
     justify-self: center;
  }
+ .btn-primary:visited {
+    color: black;
+    background-color:white;
+    border-color:black;
+}
 .btn-primary:hover {
     color: black;
     background-color:white;
     border-color:black;
 }
+.btn-primary:focus {
+    color: black;
+    background-color:white;
+    border-color:black;
+    box-shadow: 0 0 0 0.25rem rgb(0 0 0 / 27%);
+}
+
 .padding-margin {
     padding-left: 0px;
     padding-right: 17px;
