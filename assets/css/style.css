@@ -7,6 +7,7 @@
 }
 html, body {
     height: 100%;
+    scroll-behavior: smooth;
 }
 body {
     font-family: 'Lato', sans-serif;
@@ -109,7 +110,7 @@ h4 {
 .welcome-sign {
     width: 95%;
     background-color: #000000c2; 
-    border-radius:0.3rem; 
+    border-radius:1.3rem; 
     padding-bottom: 22px;
     padding-top: 22px;
     margin-bottom: 0px;
@@ -123,17 +124,51 @@ h4 {
 /*-----------------ABOUT PAGE------------------*/
 #about {
     height: auto;
-}
+ }
 .img-dwarf {
     width: 250px;
     height: auto;
     padding-left: 6px;
     padding-right: 6px;
+    margin-bottom: 12px;
 }
-
 .image-content {
   align-items: center;
 }
+.about-margin{
+    margin-top: 5rem;
+}
+
+/*---------------ABOUT PAGE - WEATHER----------------*/
+
+.home-container {
+    position: relative;
+}
+.weather-container{
+    height: 250px;
+  
+    margin-top: 90px ;
+    position: absolute;
+    top: 0;
+}
+.weather {
+    color: white;
+}
+
+.temp {
+    font-size: 40px;
+    text-align: center;
+}
+.city {
+    font-size: 1.1rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*---------------ABOUT PAGE - GALLERY----------------*/
 /*CREDIT:*/
 #gallery-container{
@@ -143,7 +178,6 @@ h4 {
     overflow: hidden;
     margin-bottom: 5rem;
 }
-
 #gallery{
     position: relative;
     width: max-content;
@@ -151,7 +185,6 @@ h4 {
     padding-top: 10px;
     padding-bottom: 10px;
 }
-
 .gallery-row{
     display: block;
     position: relative;
@@ -159,7 +192,6 @@ h4 {
     animation-name: scroll;
     animation-duration: 80s;
 }
-
 #gallery img{
     height: 160px;
     width: auto;
@@ -183,7 +215,7 @@ h4 {
     justify-content: center;
 }
 .heading-style {
-    margin-top: 8px;
+    margin-top: 1rem;
     font-size: 3rem;
     letter-spacing: 3px;
 }
@@ -243,12 +275,14 @@ h4 {
 /*-----------------Contact Us  PAGE------------------*/
 #contact {
     height: 100vh;
+    margin-top: 200px;
 }
 .image-contact {
     /*----CREDIT: CREDIT: Photo by Eveline de Bruin from Pixaby----*/
     background-image: url('../images/three-dwarfs.jpg');
     height: 200px;
     width: auto;
+    
 }
 .form-control{
     margin: 0.50rem;
@@ -357,6 +391,9 @@ footer {
     .heading-style {
         font-size: 4rem;
     }
+    .about-margin{
+    margin-top: 5rem;
+    }   
     .image-attractions,
     .image-contact
     {

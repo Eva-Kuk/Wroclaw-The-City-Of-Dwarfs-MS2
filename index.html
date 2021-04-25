@@ -32,6 +32,7 @@
 
 <body>
     <header>
+         
         <!--Navbar-->
         <!--CREDIT: navbar code customized from Bootstrap-->
         <nav class="navbar navbar-expand-lg pt-0 pb-0 fixed-top" id="navbar">
@@ -43,9 +44,8 @@
                     WROCLAW
                     <span class="navbar-text">The City Of Dwarfs</span>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -71,6 +71,18 @@
     <!-- End of site navigation-->
 
     <section class="home-container">
+         <div class="container-fluid weather-container">
+          <div class="weather-card d-flex justify-content-center align-items-center">
+                    <div class="weather justify-content-center">
+                        <h3 class="city">Weather in Wroclaw:</h3>
+                        <div class="temp">51°C</div>
+                        <div class="flex">
+                        <img src="https://openweathermap.org/img/wn/01n@2x.png" alt="" class="icon" >
+                        <div class="description">Cloudy</div>
+                      </div>
+                    </div>
+            </div>
+        </div>
         <!--Home page-->
         <div class="container-fluid">
             <div class="row align-items-center">
@@ -164,6 +176,7 @@
                 </div>
             </div>
         </div>
+      
         <!--Dwarfs gallery-->
         <!--CREDIT:code snipped for gallery from Shane Keran/dublin-unlocked-->
         <div class="container-fluid" id="gallery-container" aria-hidden="true">
