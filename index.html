@@ -22,8 +22,8 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
     <!-- Email.js -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-    <script type="text/javascript">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script>
         (function () {
             emailjs.init("user_3uFdTl6QXt05h7FETE10Q");
         })();
@@ -32,7 +32,6 @@
 
 <body>
     <header>
-         
         <!--Navbar-->
         <!--CREDIT: navbar code customized from Bootstrap-->
         <nav class="navbar navbar-expand-lg pt-0 pb-0 fixed-top" id="navbar">
@@ -67,20 +66,21 @@
             </div>
         </nav>
     </header>
-
     <!-- End of site navigation-->
 
-    <section class="home-container">
-         <div class="container-fluid weather-container">
-          <div class="weather-card d-flex justify-content-center align-items-center">
-                    <div class="weather justify-content-center">
-                        <h3 class="city">Weather in Wroclaw:</h3>
-                        <div class="temp">51°C</div>
-                        <div class="flex">
-                        <img src="https://openweathermap.org/img/wn/01n@2x.png" alt="" class="icon" >
+    <!--Hero Image section -->
+        <section class="home-container">
+            <!--Weather section-->        
+        <div class="container-fluid weather-container">
+            <div class="weather-card d-flex  align-items-center">
+                <div class="weather justify-content-center">
+                    <h3 class="city d-flex justify-content-center">Weather in Wroclaw:</h3>
+                    <div class="temp d-flex justify-content-center">51°C</div>
+                    <div class="flex">
+                        <img src="https://openweathermap.org/img/wn/01n@2x.png" alt="" class="icon">
                         <div class="description">Cloudy</div>
-                      </div>
                     </div>
+                </div>
             </div>
         </div>
         <!--Home page-->
@@ -176,7 +176,7 @@
                 </div>
             </div>
         </div>
-      
+
         <!--Dwarfs gallery-->
         <!--CREDIT:code snipped for gallery from Shane Keran/dublin-unlocked-->
         <div class="container-fluid" id="gallery-container" aria-hidden="true">
@@ -274,7 +274,6 @@
                     <img src="assets/images/hose-dwarf.jpg" alt="hose-dwarf">
                     <!--CREDIT: Photo made by   Kate Lukianova from Pixabay -->
                     <img src="assets/images/park-m-dwarf.jpg" alt="park-m-dwarf">
-
                 </div>
             </div>
         </div>
@@ -322,7 +321,10 @@
         </div>
         <div class="container contact-text d-flex justify-content-center">
             <p>Would you like to get more information or need help in organizing a trip to Wroclaw, please contact us,
-                we will be happy to help. </p>
+                we will be happy to help. <br>You can also<strong> Call Us</strong> on
+                <a href="tel:+55545667800" class="contact-details" aria-label="Go to our Phone Number">
+                    <i class="fas fa-phone-alt" aria-hidden="true"></i> 555 4657800
+                </a></p>
         </div>
         <div class="container">
             <div class="row d-flex justify-content-center pl-0">
@@ -330,14 +332,10 @@
                     <form onsubmit="return sendMail(this);" id="contactForm">
                         <input type="text" name="name" id="fullname" class="form-control" placeholder="Your Full Name"
                             required>
-
                         <input type="email" name="email" id="emailaddress" class="form-control"
                             placeholder="Email Address" required>
-
                         <textarea rows="10" name="message" id="message" class="form-control"
                             placeholder="Your Message Here..." required></textarea>
-
-
                         <div class="form-button">
                             <button type="submit" id="send-button" class="form-control btn-primary">Send</button>
                         </div>
@@ -347,7 +345,6 @@
         </div>
     </section>
     <!--End of Contact page-->
-
 
     <!--Footer-->
     <footer class="fixed-bottom" id="footer">
@@ -375,6 +372,7 @@
         </div>
     </footer>
     <!--End of Footer-->
+    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
         integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
         crossorigin="anonymous"></script>
