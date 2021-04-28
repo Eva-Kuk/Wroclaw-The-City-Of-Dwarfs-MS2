@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Lato&display=swap');
 
+:root {
+    --primary--clr:#0e0e10;
+    --secondary--clr:#e34234;
+    --background--clr:#c7c7d1;
+    --text--clr:#f4f4f6;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -12,13 +19,13 @@ html, body {
 body {
     font-family: 'Lato', sans-serif;
     font-size: 1.1rem;
-    background-color: #c7c7d1;
+    background-color: var(--background--clr);
 }
 h1 {
     font-family: 'Just Another Hand', cursive;
 }
 h3 {
-    color:#f4f4f6;
+    color: var(--text--clr);
     font-size:1.3rem;
 }
 h2 {
@@ -28,7 +35,6 @@ h2 {
 }
 h4 {
     font-family: 'Just Another Hand', cursive;
-    font-size: 1,3rem;
 }
 /*----------------NAVIGATION------------------*/
 .logo {
@@ -42,19 +48,19 @@ h4 {
     height: auto;
 }
 .navbar {
-    background-color: black;
+    background-color: var(--primary--clr);
 }
 .navbar-brand {
     font-family: 'Just Another Hand', cursive;
-    color: white;
+    color: var(--text--clr);
     font-size: 1.8rem;
     margin-right: 0px;
 }
 .navbar-brand:hover {
-    color: red;
+    color: var(--secondary--clr);
 }
 .navbar-toggler {
-    color: white; 
+    color: var(--text--clr); 
     padding-right: 0px; 
     padding-left: 5px;
 }
@@ -64,17 +70,17 @@ h4 {
             justify-content: flex-end;
 }
 .nav-link {
-     color: white;
+     color: var(--text--clr);
      font-size: 1.3rem;
 }
 .nav-link:hover {
-    color: red;
+    color: var(--secondary--clr);
 }
 .navbar-nav .nav-link {
     text-align: center;
 }
 .navbar-toggler .navbar-toggler-icon {
-    color: white;
+    color: var(--text--clr);
     background-color: thistle;
 }
 
@@ -109,7 +115,7 @@ h4 {
 }
 .welcome-sign {
     width: 95%;
-    background-color: #000000c2; 
+    background-color: var(--primary--clr); 
     border-radius:1.3rem; 
     padding-bottom: 22px;
     padding-top: 22px;
@@ -146,21 +152,21 @@ h4 {
 }
 .weather-container{
     height: 250px;
-  
     margin-top: 90px ;
     position: absolute;
     top: 0;
 }
 .weather {
-    color: white;
+    color: var(--text--clr);
 }
 
 .temp {
-    font-size: 40px;
+    font-size: 45px;
     text-align: center;
 }
-.city {
-    font-size: 1.1rem;
+.city,
+.description {
+    font-size: 1rem;
 }
 
 .flex {
@@ -172,7 +178,7 @@ h4 {
 /*---------------ABOUT PAGE - GALLERY----------------*/
 /*CREDIT:*/
 #gallery-container{
-    background-color: white;
+    background-color: var(--text--clr);
     position: relative;
     height: 340px; 
     overflow: hidden;
@@ -198,17 +204,16 @@ h4 {
     padding: 5px;
 }
 
-@keyframes scroll {  /* Code sourced from Stack Overflow (https://stackoverflow.com/questions/41587802/css-animation-from-left-to-right) */
+/* Code sourced from Stack Overflow (https://stackoverflow.com/questions/41587802/css-animation-from-left-to-right) */
+@keyframes scroll { 
     0% {right: 0%;}
     50%{right : 50%;}
     100%{right: 0%;}
 } 
-
 /*-----------------ATTRACTIONS PAGE------------------*/
 #attractions {
     height: auto;
 }
-
 .heading {
     margin-top: 16px;
     display: flex;
@@ -240,9 +245,9 @@ h4 {
     display: grid;  
 }
 .btn-success {
-    color: black;
-    background-color:red;
-    border: 1px solid black;
+    color: var(--primary--clr);
+    background-color:var(--secondary--clr);
+    border: 1px solid var(--primary--clr);
     border-radius: 0.25rem;
     margin-bottom: 0.25rem;
     margin-top: 0.25rem;
@@ -252,14 +257,14 @@ h4 {
     justify-self: center;
  }
 .btn-success:hover {
-    color: black;
-    background-color:white;
-    border-color:black;
+    color: var(--primary--clr);
+    background-color:var(--text--clr);
+    border-color:var(--primary--clr);
 }
 .btn-success:focus {
-    color: black;
-    background-color:white;
-    border-color:black;
+    color:var(--primary--clr);
+    background-color:var(--text--clr);
+    border-color:var(--primary--clr);
     box-shadow: 0 0 0 0.25rem rgb(0 0 0 / 27%);
 }
 .btn span {
@@ -282,50 +287,50 @@ h4 {
     background-image: url('../images/three-dwarfs.jpg');
     height: 200px;
     width: auto;
-    
 }
 .form-control{
     margin: 0.50rem;
 }
-
 .form-control:focus {
     box-shadow: none;
 }
-
 .btn-primary {
-    color: black;
-    background-color:red;
-    border: 1px solid black;
+    color: var(--primary--clr);
+    background-color:var(--secondary--clr);
+    border: 1px solid var(--primary--clr);
     border-radius: 0.25rem;
     margin-bottom: 0.25rem;
     margin-top: 0.25rem;
     justify-self: center;
  }
  .btn-primary:visited {
-    color: black;
-    background-color:white;
-    border-color:black;
+    color: var(--primary--clr);
+    background-color:var(--text--clr);
+    border-color:var(--primary--clr);
 }
 .btn-primary:hover {
-    color: black;
-    background-color:white;
-    border-color:black;
+    color: var(--primary--clr);
+    background-color:var(--text--clr);
+    border-color:var(--primary--clr);
 }
 .btn-primary:focus {
-    color: black;
-    background-color:white;
-    border-color:black;
+    color: var(--primary--clr);
+    background-color:var(--text--clr);
+    border-color:var(--primary--clr);
     box-shadow: 0 0 0 0.25rem rgb(0 0 0 / 27%);
 }
-
 .padding-margin {
     padding-left: 0px;
     padding-right: 17px;
     margin-bottom:80px;
 }
+a.contact-details {
+    color: var(--secondary--clr);
+}
+
 /*-----------------FOOTER------------------*/
 footer {
-    background-color:black;
+    background-color:var(--primary--clr);
     bottom:0px;
     height: 3.5rem;
     display: -webkit-box;
@@ -345,10 +350,10 @@ footer {
 }
 .social-links-item i {
     font-size: 1.5rem;
-    color:white;
+    color:var(--text--clr);
 }
 .social-links-item i:hover {
-    color:red;
+    color:var(--secondary--clr);
 }
 .social-links {
     padding-left:0;
@@ -369,7 +374,7 @@ footer {
         padding-left: 0px;
     }
     .fa-bars:hover {
-        color: red;
+        color: var(--secondary--clr);
     }
     .navbar-text {
         font-size: 2.1rem;
@@ -392,7 +397,7 @@ footer {
         font-size: 4rem;
     }
     .about-margin{
-    margin-top: 5rem;
+        margin-top: 5rem;
     }   
     .image-attractions,
     .image-contact
@@ -407,7 +412,7 @@ footer {
         font-size: 1.2rem;
     }
     .img-dwarf { 
-    width: 300px;
+        width: 300px;
     }
 }
 @media screen and (min-width:763px){
