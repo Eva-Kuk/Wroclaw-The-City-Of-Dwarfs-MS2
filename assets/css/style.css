@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Lato&display=swap');
 
 :root {
@@ -139,7 +146,9 @@ h4 {
     margin-bottom: 12px;
 }
 .image-content {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .about-margin{
     margin-top: 5rem;
@@ -170,9 +179,15 @@ h4 {
 }
 
 .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /*---------------ABOUT PAGE - GALLERY----------------*/
@@ -186,6 +201,8 @@ h4 {
 }
 #gallery{
     position: relative;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     display: inline-block;
     padding-top: 10px;
@@ -194,9 +211,12 @@ h4 {
 .gallery-row{
     display: block;
     position: relative;
-    animation:linear infinite;
-    animation-name: scroll;
-    animation-duration: 80s;
+    -webkit-animation:linear infinite;
+            animation:linear infinite;
+    -webkit-animation-name: scroll;
+            animation-name: scroll;
+    -webkit-animation-duration: 80s;
+            animation-duration: 80s;
 }
 #gallery img{
     height: 160px;
@@ -205,6 +225,11 @@ h4 {
 }
 
 /* Code sourced from Stack Overflow (https://stackoverflow.com/questions/41587802/css-animation-from-left-to-right) */
+@-webkit-keyframes scroll { 
+    0% {right: 0%;}
+    50%{right : 50%;}
+    100%{right: 0%;}
+}
 @keyframes scroll { 
     0% {right: 0%;}
     50%{right : 50%;}
@@ -216,8 +241,12 @@ h4 {
 }
 .heading {
     margin-top: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .heading-style {
     margin-top: 1rem;
@@ -242,6 +271,7 @@ h4 {
     width: 100%;
     min-height: 200px;
     margin-bottom: 7px;
+    display: -ms-grid;
     display: grid;  
 }
 .btn-success {
@@ -254,7 +284,8 @@ h4 {
     padding-top: 0px;
     padding-bottom: 0px;
     width: 80%;
-    justify-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
  }
 .btn-success:hover {
     color: var(--primary--clr);
@@ -265,7 +296,8 @@ h4 {
     color:var(--primary--clr);
     background-color:var(--text--clr);
     border-color:var(--primary--clr);
-    box-shadow: 0 0 0 0.25rem rgb(0 0 0 / 27%);
+    -webkit-box-shadow: 0 0 0 0.25rem rgb(0 0 0 / 27%);
+            box-shadow: 0 0 0 0.25rem rgb(0 0 0 / 27%);
 }
 .btn span {
     font-size: 0.9rem;
@@ -292,7 +324,8 @@ h4 {
     margin: 0.50rem;
 }
 .form-control:focus {
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
 }
 .btn-primary {
     color: var(--primary--clr);
@@ -301,7 +334,8 @@ h4 {
     border-radius: 0.25rem;
     margin-bottom: 0.25rem;
     margin-top: 0.25rem;
-    justify-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
  }
  .btn-primary:visited {
     color: var(--primary--clr);
@@ -317,7 +351,8 @@ h4 {
     color: var(--primary--clr);
     background-color:var(--text--clr);
     border-color:var(--primary--clr);
-    box-shadow: 0 0 0 0.25rem rgb(0 0 0 / 27%);
+    -webkit-box-shadow: 0 0 0 0.25rem rgb(0 0 0 / 27%);
+            box-shadow: 0 0 0 0.25rem rgb(0 0 0 / 27%);
 }
 .padding-margin {
     padding-left: 0px;
