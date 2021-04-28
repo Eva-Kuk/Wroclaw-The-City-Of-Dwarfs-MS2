@@ -22,7 +22,7 @@ While working on this project I encountered the following problems which I tried
  The error appeared in an array where the lengths and widths were incorrectly defined, 
  instead of specifying lat and lng as an object had an additional location parameter that was not defined as specified in the code
 - SOLUTION: removing the location: property from the array
-![altdwarfsbuttonissue](wireframes/testing/dwarf-button-devtool-errors.png)
+![altdwarfsbuttondevtoolerror](wireframes/testing/dwarf-button-devtool-errors.png)
 ![altdwarfsmarker](wireframes/testing/dwarf-markers.png)
 2. Issue with broken links. Navbar didn't respond, it didn't move to each section when clicked on individual links.
  The error apeared because I implemented the solution to close dropdown menu after selecting link on navbar on small devices
@@ -32,7 +32,15 @@ While working on this project I encountered the following problems which I tried
 ![altnavbarissue](wireframes/testing/navbar-issue.png)
 3.  Issue with not collapsing the burger menu after removing the solution to close dropdown menu from botstrap version 4.6
 - SOLUTION: The solution was found on the Stack Overflow using a function in javascript to hide collapsible Bootstrap5 navbar on click.
-4. 
+4. While testing the API weather, I noticed an 401 error displayed in google search when I tried to check the weather object for Wroclaw
+`{
+"cod": 401,
+"message": "Invalid API key. Please see http://openweathermap.org/faq#error401 for more info."
+}`. With the help of tutor support, an error was found and solved.
+![altValidator.w3.org](wireframes/testing/fetch-weather-issue.png)
+SOLUTION: The code I was using hardquoting quotes which were braking the url. It was changed using backticks. 
+I also used a Math.floor function to round a temperature number to an integer.
+![altValidator.w3.org](wireframes/testing/fetch-weather-issue-solved.png)
 
 ## Code Validation
 ---
