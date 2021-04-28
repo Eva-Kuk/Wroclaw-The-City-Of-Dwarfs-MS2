@@ -61,7 +61,18 @@ It is also requested feature on [Github](https://github.com/w3c/css-validator/is
 - warnings related to unknown vendor extension i found thai is also non-issue after reading about it on different sources [Stack Overflow](https://stackoverflow.com/questions/52490004/what-are-all-of-these-w3c-css-validation-warnings-about)
 ![altvalidatorcssissues](wireframes/testing/validator-css-issues.png)
 ![altvalidatorcss1](wireframes/testing/validator-css1.png)
-3. used [jshint](https://jshint.com/)
+
+3. used [jshint](https://jshint.com/) to validate javascript code for script.js 
+### script.js testing
+In the script.js file jshint it did not show any errors except 23 warnings, about 6 missing semicolons
+in the code, which I added to the code. The other warnings were related to (use 'esversion: 6')
+or Mozilla JS extensions (use moz). I found the solution on the [stackoverflow](https://stackoverflow.com/questions/27441803/why-does-jshint-throw-a-warning-if-i-am-using-const)
+that you should add a comment at the beginning of each js file `/*jshint esversion: 6 */` which worked.
+There was also one undefined bootstrap variable which was used for hide collapsible navbar on click in bootstrap5. I try to removed but after that code didnt work.
+![altjshinttesting](wireframes/testing/jshint-script-js-testing.png)
+![altjshinttesting11](wireframes/testing/jshint-script-js-testing1.png)
+
+ 
 
 ## Testing User stories
 ---
@@ -73,7 +84,7 @@ It is also requested feature on [Github](https://github.com/w3c/css-validator/is
 
 2. As a user, I want to be able to acces the website on a desktop and also mobile devices, so that I won't be restricted from which device I can access the site. 
 - The website is responsive and tested on various devices as well as operating systems
-- The footer is hidden on scrol to be able to display the larger website, expecially on small devices
+- The footer is hidden on scrol to be able to display the larger website, expecially on smaller devices
 
 3. As a user, I want to be able to follow or connect with the owner of the website on social media, so I can get more information about the city.
 - Clearly labelled social media links displayed on the footer easy to find.   
@@ -83,24 +94,31 @@ It is also requested feature on [Github](https://github.com/w3c/css-validator/is
 - In the About page there is a short and concise not too overwhelming history of the city as well as its 
 main attraction dwarfs.
 - In the Attractions page includes the main attractions of the city, different kind of accommodation in 
-various price ranges and restaurants/pubs/bars where theree are served traditional Polish as well as these standard dishes
-- An animated gallery with pictures of some dwarfs has been added to the website
+various price ranges and restaurants/pubs/bars where there are served traditional Polish as well as these standard dishes and also localization and 
+a little description about dwarfs
+- An animated gallery with pictures of some dwarfs has been added to the website to give a user/futur visitor example of little dwarfs
 ![altaboutpage1](wireframes/testing/about-page1.png)
 ![altaboutpage2](wireframes/testing/about-page2.png)
 ![altaboutpage3](wireframes/testing/about-page3.png)
+5. As a user, I want to use interactive elements on the website
 
-5. As a user, I want to have an access to the map of the city with various places, so I can visually 
+6. As a user, I want to have an access to the map of the city with various places, so I can visually 
 see the location of places.
 - On the Attractions page there is a map with 4 buttons: Attractions button, Food&Drinks button, Accomodation button, Dwarf's button with selected places for each button.
 When pressed on each button, it shows their location on the map with a name of the place and the short description.
 ![altattractionspage](wireframes/testing/attractions-page.png)
 
-6. As a user, I want to be able to contact the site owner, so I will be able to share my feetback regardling 
+7. As a user, I want to be able to contact the site owner, so I will be able to share my feetback regardling 
 the website or ask about my planned visit and get some more advices and recomendations.
-- On the contact page there is a contact form which user can fill in send
+- On the contact page there is a contact form which user can fill in send. The contact form is connected using EmailJS servics which allows users
+to send their email directly without using the server. Iit was used the allert as interactive custom modal popup window when a usersubmits a contact form.
+Depending on if the user puts data in the form it will display success or error note.
 ![altcontactpage](wireframes/testing/contact-page.png)
+![altcontactemailsuccesssign](wireframes/testing/contact-email-success-sign.png)
 
-7. As a user, I want to easily understand the purpose of their site.
+
+
+8. As a user, I want to easily understand the purpose of their site.
   - When user lands on the website the jumbotron welcome sign describes the website's purpose 
 ![altwelcomesign](wireframes/testing/welcome-sign.png)
 

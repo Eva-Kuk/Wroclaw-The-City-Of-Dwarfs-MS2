@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 /* CREDIT from w3school.com and customised for slide down a footer on scroll*/
 // Footer slide down on scroll
 let prevScrollpos = window.pageYOffset;
@@ -10,7 +11,6 @@ window.onscroll = function () {
     }
     this.prevScrollpos = currentScrollpos;
 };
-
 
 // Weather API
 // CREDIT from youtube tutorial how to build a weather API from Jonah Lawrence 
@@ -43,12 +43,12 @@ let weather = {
 };
 weather.fetchWeather("Wroclaw");
 
-
 // Hide collapsible navbar on click
 // Credit: solution taken from stackoverflow 
-const navLinks = document.querySelectorAll('.nav-item')
-const menuToggle = document.getElementById('navbarNav')
-const bsCollapse = new bootstrap.Collapse(menuToggle)
+const navLinks = document.querySelectorAll('.nav-item');
+const menuToggle = document.getElementById('navbarNav');
+const bsCollapse = new bootstrap.Collapse(menuToggle);
 navLinks.forEach((l) => {
-    l.addEventListener('click', () => { bsCollapse.toggle() })
-})
+    l.addEventListener('click', () => { bsCollapse.toggle(); }
+    );
+});
