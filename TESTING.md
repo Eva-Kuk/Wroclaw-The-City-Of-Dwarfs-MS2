@@ -19,26 +19,82 @@
 While working on this project I encountered the following problems which I tried to solve in the following way:
 
 1. When I tried to connect the buttons to the API map, the btn-dwarfs button showed 10 errors in the dev tool.
- The error appeared in an array where the lengths and widths were incorrectly defined, instead of specifying lat and lng as an object had an additional location parameter that was not defined as specified in the code
+ The error appeared in an array where the lengths and widths were incorrectly defined, 
+ instead of specifying lat and lng as an object had an additional location parameter that was not defined as specified in the code
 - SOLUTION: removing the location: property from the array
 ![altdwarfsbuttonissue](wireframes/testing/dwarf-button-devtool-errors.png)
 ![altdwarfsmarker](wireframes/testing/dwarf-markers.png)
-2. Issue with broken links. Navbar didn't respond didn't move to each section when clicked on individual links.
+2. Issue with broken links. Navbar didn't respond, it didn't move to each section when clicked on individual links.
  The error apeared because I implemented the solution to close dropdown menu after selecting link on navbar on small devices
   for from my previous project which worked perfectly on earlier version of bootstrap 4.6.
   bar would collapse after selecting the link on
  - SOLUTION: removing unnecessary code
 ![altnavbarissue](wireframes/testing/navbar-issue.png)
+3.  Issue with not collapsing the burger menu after removing the solution to close dropdown menu from botstrap version 4.6
+- SOLUTION: The solution was found on the Stack Overflow using a function in javascript to hide collapsible Bootstrap5 navbar on click.
+4. 
 
 ## Code Validation
 ---
-1. 
-2.
-3.
+1. used [W3C Markup Validation Service HTML](https://validator.w3.org/) to validate my HTML code for both pages index.html and gallery.html. 
+![altValidator.w3.org](wireframes/testing/validator-w3-org.png)
+Initially, the validator displayed 2 warnings as shown below but these have been fixed.
+- **Warning:** The type attribute is unnececary for Java Script rources
+![altvalidatorhtml](wireframes/testing/validator-html.png)
+- FIXED - I found the solution on the website [webmasterworld](https://www.webmasterworld.com/javascript/4879097.htm)
+to delete type attribute from the code: type="text/javascript"
+
+2. used [jigsaw W3C CSS Validation Service](https://jigsaw.w3.org/css-validator//) to validate my CSS code, came out  clean
+![altvalidatorcss](wireframes/testing/validator-css.png)
+ but showed 1 error and 41 warnings related to Variables values and autoprefixer vendor extensions
+- error : font-size Too many values or values are not recognized : 1,3rem on the line 31 have got removed
+- warnings related to Variables values, research on the internet and found this is a non-issue after reading reports on [Stack Overflow](https://stackoverflow.com/questions/57661659/w3c-css-validation-parse-error-on-variables).
+It is also requested feature on [Github](https://github.com/w3c/css-validator/issues/111) too.
+- warnings related to unknown vendor extension i found thai is also non-issue after reading about it on different sources [Stack Overflow](https://stackoverflow.com/questions/52490004/what-are-all-of-these-w3c-css-validation-warnings-about)
+![altvalidatorcssissues](wireframes/testing/validator-css-issues.png)
+![altvalidatorcss1](wireframes/testing/validator-css1.png)
+3. used [jshint](https://jshint.com/)
 
 ## Testing User stories
 ---
+1. As a user, I want to navigate the site easily, so that I can find what I need effectively.
+- No matter what page the user lands on, they can easily find and use navigation bar which also  is set fixed, being available all times.
+- The logo image always leads back to the home page.
+![althomepage](wireframes/testing/home-page.png)
+- The places on the map, when clicked, switch from one to the other without the need to close on the "x" tag
 
+2. As a user, I want to be able to acces the website on a desktop and also mobile devices, so that I won't be restricted from which device I can access the site. 
+- The website is responsive and tested on various devices as well as operating systems
+- The footer is hidden on scrol to be able to display the larger website, expecially on small devices
+
+3. As a user, I want to be able to follow or connect with the owner of the website on social media, so I can get more information about the city.
+- Clearly labelled social media links displayed on the footer easy to find.   
+![altsocialmedialinks](wireframes/testing/social-media-links.png)
+
+4. As a user, I would like to know what the city has to offer, so that I can adjust it to my needs and interests.
+- In the About page there is a short and concise not too overwhelming history of the city as well as its 
+main attraction dwarfs.
+- In the Attractions page includes the main attractions of the city, different kind of accommodation in 
+various price ranges and restaurants/pubs/bars where theree are served traditional Polish as well as these standard dishes
+- An animated gallery with pictures of some dwarfs has been added to the website
+![altaboutpage1](wireframes/testing/about-page1.png)
+![altaboutpage2](wireframes/testing/about-page2.png)
+![altaboutpage3](wireframes/testing/about-page3.png)
+
+5. As a user, I want to have an access to the map of the city with various places, so I can visually 
+see the location of places.
+- On the Attractions page there is a map with 4 buttons: Attractions button, Food&Drinks button, Accomodation button, Dwarf's button with selected places for each button.
+When pressed on each button, it shows their location on the map with a name of the place and the short description.
+![altattractionspage](wireframes/testing/attractions-page.png)
+
+6. As a user, I want to be able to contact the site owner, so I will be able to share my feetback regardling 
+the website or ask about my planned visit and get some more advices and recomendations.
+- On the contact page there is a contact form which user can fill in send
+![altcontactpage](wireframes/testing/contact-page.png)
+
+7. As a user, I want to easily understand the purpose of their site.
+  - When user lands on the website the jumbotron welcome sign describes the website's purpose 
+![altwelcomesign](wireframes/testing/welcome-sign.png)
 
 ## Testing Functionality
 ---
