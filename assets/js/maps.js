@@ -1,21 +1,21 @@
+/*jshint esversion: 6 */
 /* CREDIT: Google map documentation used and and Code institute lessons and customized link:https://developers.google.com/maps/documentation*/
     
-
 //Add the map of Poland
 function initMap(){
 
-    var map = new google.maps.Map(document.getElementById("map"), {
+    let map = new google.maps.Map(document.getElementById("map"), {
         zoom: 5,
         center: {lat:52.237049, lng:21.017532},
     });
 // Add the location marker of Wroclaw on the map
-    var marker = new google.maps.Marker({
+    let marker = new google.maps.Marker({
         position: {lat:51.1079, lng:17.0385},
         map:map
     });
 
 // Add the info of Wroclaw on the map
-    var infoWindow = new google.maps.InfoWindow({
+    let infoWindow = new google.maps.InfoWindow({
         content:'<h4>Wroclaw</h4>',
     });
 
@@ -27,15 +27,15 @@ function initMap(){
 //Add the map of Wroclaw with locations of the attractions when pressed on the button 'Attractions'
 document.getElementById("btn-attractions").addEventListener("click",initMapAttractions);
 function initMapAttractions() {
-    var attractionsMap = new google.maps.Map(document.getElementById("map"), {
+    let attractionsMap = new google.maps.Map(document.getElementById("map"), {
         zoom: 14,
         center: {lat:51.1079, lng:17.0385},
     });
 
-    var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 //Add markers to attractionsMarkers Array
-    let attractionsMarkers = [
+    const attractionsMarkers = [
         {
             location: {lat:51.1008, lng:17.0300}, 
             info:"<h5>Capitol</h5><p>The Capitol Musical Theater offers entertainment and bold reflection</p>"
@@ -91,14 +91,14 @@ function initMapAttractions() {
     ];
 // add click listener to each marker which opens the InfoWindow with attractionsMarkers info
 //<!--CREDIT: solution for Integrate Google Maps MarkerClusterer with infowindow from stackoverflow
-        var infowindow = new google.maps.InfoWindow();
+        let infowindow = new google.maps.InfoWindow();
 
-        var markers = attractionsMarkers.map(function (attractionsMarkers, i) {
-        var marker = new google.maps.Marker({
+        let markers = attractionsMarkers.map(function (attractionsMarkers, i) {
+        let marker = new google.maps.Marker({
             position:attractionsMarkers.location,
             label: labels[i % labels.length]
         });
-        google.maps.event.addListener(marker, 'click', function(evt) {
+        google.maps.event.addListener(marker, 'click', function() {
             infowindow.setContent(attractionsMarkers.info);
             infowindow.open(attractionsMap, marker);
         });
@@ -106,7 +106,7 @@ function initMapAttractions() {
 
     });
 
-    var markerCluster = new MarkerClusterer(attractionsMap, markers, {
+    let markerCluster = new MarkerClusterer(attractionsMap, markers, {
         imagePath:
                 "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
     });
@@ -115,15 +115,15 @@ function initMapAttractions() {
 //Add the map of Wroclaw with locations of the FoodDrinks when pressed on the button 'Food&Drinks'
 document.getElementById("btn-food-drinks").addEventListener("click",initMapfoodDrinks);
 function initMapfoodDrinks() {
-    var foodDrinksMap = new google.maps.Map(document.getElementById("map"), {
+    let foodDrinksMap = new google.maps.Map(document.getElementById("map"), {
         zoom: 14,
         center: {lat:51.1079, lng:17.0385},
     });
 
-var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
  // Add markers to foodDrinksMarkers Array
-let foodDrinksMarkers = [
+const foodDrinksMarkers = [
     {
         location: {lat:51.1092, lng:17.0320}, 
         info: "<h5>Whiskey in the Jar</h5><p> Unique place, high-class steakhouse, offering beefsteaks of highest value, prepared on lava grill</p>"
@@ -167,10 +167,10 @@ let foodDrinksMarkers = [
 ];
 // add click listener to each marker which opens the InfoWindow with foodDrinksMarkers info
 //<!--CREDIT: solution for Integrate Google Maps MarkerClusterer with infowindow from stackoverflow
-var infowidow = new google.maps.InfoWindow();
+let infowidow = new google.maps.InfoWindow();
 
-var markers = foodDrinksMarkers.map(function (foodDrinksMarkers, i) {
-var marker =  new google.maps.Marker({
+let markers = foodDrinksMarkers.map(function (foodDrinksMarkers, i) {
+let marker =  new google.maps.Marker({
         position:foodDrinksMarkers.location,
         label: labels[i % labels.length]
     });
@@ -181,7 +181,7 @@ var marker =  new google.maps.Marker({
     return marker;
 });
 
-var marker = new MarkerClusterer(foodDrinksMap, markers, {
+let marker = new MarkerClusterer(foodDrinksMap, markers, {
     imagePath:
             "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
 });
@@ -190,15 +190,15 @@ var marker = new MarkerClusterer(foodDrinksMap, markers, {
 //Add the map of Wroclaw with locations of the accomodation when pressed on the button 'Accomodation'
 document.getElementById("btn-accomodation").addEventListener("click",initMapAccomodation);
 function initMapAccomodation() {
-    var accomodationMap = new google.maps.Map(document.getElementById("map"), {
+    let accomodationMap = new google.maps.Map(document.getElementById("map"), {
         zoom: 14,
         center: {lat:51.1079, lng:17.0385},
     });
 
-    var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     // Add markers to accomodationMarkers Array
-    var accomodationMarkers = [
+    const accomodationMarkers = [
         {
             location: {lat:51.1092, lng:17.0377}, 
             info:"<h5>Hotel LOTHUS</h5><p>Functional accomodations in a strinking stone hotel with a sophisticated</p>"
@@ -229,11 +229,7 @@ function initMapAccomodation() {
         },
         {
             location: {lat:51.1080, lng:17.0249}, 
-            info:"<h5>PURO Wroclaw Stare Miasto</h5><p>   </p>"
-        },
-        {
-            location: {lat:51.1080, lng:17.0249}, 
-            info:"<h5></h5><p>PURO Wrocław Stare Miasto is conveniently located in the very center of Wrocław, just 500 m from the Old Market Square.</p>"
+            info:"<h5>PURO</h5><p>It is conveniently located in the very center of Wrocław, just 500 m from the Old Market Square.</p>"
         },
         {
             location: {lat:51.1086, lng:17.0391}, 
@@ -242,14 +238,14 @@ function initMapAccomodation() {
     ];
     // add click listener to each marker which opens the InfoWindow with accomodationMarkers info
     //<!--CREDIT: solution for Integrate Google Maps MarkerClusterer with infowindow from stackoverflow
-    var infowindow = new google.maps.InfoWindow();
+    let infowindow = new google.maps.InfoWindow();
 
-    var markers = accomodationMarkers.map(function (accomodationMarkers, i) {
-    var marker = new google.maps.Marker({
+    let markers = accomodationMarkers.map(function (accomodationMarkers, i) {
+    let marker = new google.maps.Marker({
             position:accomodationMarkers.location,
             label: labels[i % labels.length]
         });
-        google.maps.event.addListener(marker, 'click', function(evt) {
+        google.maps.event.addListener(marker, 'click', function() {
                 infowindow.setContent(accomodationMarkers.info);
                 infowindow.open(accomodationMap, marker);
     });
@@ -265,15 +261,15 @@ function initMapAccomodation() {
 //Add the map of Wroclaw with locations of the attractions when pressed on the button 'Attractions'
 document.getElementById("btn-dwarfs").addEventListener("click",initMapDwarfs);
 function initMapDwarfs() {
-    var dwarfsMap = new google.maps.Map(document.getElementById("map"), {
+    let dwarfsMap = new google.maps.Map(document.getElementById("map"), {
         zoom: 14,
         center: {lat:51.1079, lng:17.0385},
     });
 
-    var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     // Add markers to dwarfsMarkers Array
-    var dwarfsMarkers = [
+    const dwarfsMarkers = [
         {
             location: {lat:51.109661, lng:17.031686}, 
             info:"<h5>Deaf, Blind man, W-Skers </h5><p>Three disabled dwarfs, who are ambassadors of the campaign 'Wroclaw without borders', which promotes making Wroclaw a city friendly for disabled people.</p>"
@@ -308,7 +304,7 @@ function initMapDwarfs() {
         },
         {
             location: {lat:51.108928, lng:17.032869}, 
-            info:"<h5>Syzyfki </h5><p> Pusher Lifting the ball are the most popular, very hardworking and a bit unbright dwarfs in the city who feel the need to help other people, but they went to work in a slightly ... unusual way.</p>"
+            info:"<h5>Sisyphus</h5><p> Pusher Lifting the ball are the most popular, very hardworking and a bit unbright dwarfs in the city who feel the need to help other people, but they went to work in a slightly ... unusual way.</p>"
         },
         {
             location: {lat:51.110733, lng:17.033558}, 
@@ -316,7 +312,7 @@ function initMapDwarfs() {
         },
         {
             location: {lat:51.112667, lng:17.041944}, 
-            info:"<h5>ParkM</h5><p>   </p>"
+            info:"<h5>ParkM</h5><p>He participated in the modernization of the Odra embankment and the wells. If it weren't for him, the boulevard wouldn't look as beautiful as it does now. Keep an eye on him - he's going there with his excavator!</p>"
         },
         {
             location: {lat:51.116303, lng:17.047167}, 
@@ -328,12 +324,12 @@ function initMapDwarfs() {
     //<!--CREDIT: solution for Integrate Google Maps MarkerClusterer with infowindow from stackoverflow
             var infowindow = new google.maps.InfoWindow();
 
-    var markers = dwarfsMarkers.map(function (dwarfsMarkers, i) {
-        var marker = new google.maps.Marker({
+    let markers = dwarfsMarkers.map(function (dwarfsMarkers, i) {
+        let marker = new google.maps.Marker({
             position:dwarfsMarkers.location,
             label: labels[i % labels.length]
         });
-        google.maps.event.addListener(marker, 'click', function(evt) {
+        google.maps.event.addListener(marker, 'click', function() {
                 infowindow.setContent(dwarfsMarkers.info);
                 infowindow.open(dwarfsMap, marker);
         });

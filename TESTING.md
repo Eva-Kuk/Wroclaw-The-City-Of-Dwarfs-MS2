@@ -64,13 +64,23 @@ It is also requested feature on [Github](https://github.com/w3c/css-validator/is
 
 3. used [jshint](https://jshint.com/) to validate javascript code for script.js 
 ### script.js testing
-In the script.js file jshint it did not show any errors except 23 warnings, about 6 missing semicolons
-in the code, which I added to the code. The other warnings were related to (use 'esversion: 6')
-or Mozilla JS extensions (use moz). I found the solution on the [stackoverflow](https://stackoverflow.com/questions/27441803/why-does-jshint-throw-a-warning-if-i-am-using-const)
+In the file script.js static analysis tool: jshint did not show any errors except 23 warnings, about:
+-  6 missing semicolons in the code, which has been added to the code. 
+- The other warnings were related to (use 'esversion: 6') or Mozilla JS extensions (use moz). 
+I found the solution on the [stackoverflow](https://stackoverflow.com/questions/27441803/why-does-jshint-throw-a-warning-if-i-am-using-const)
 that you should add a comment at the beginning of each js file `/*jshint esversion: 6 */` which worked.
-There was also one undefined bootstrap variable which was used for hide collapsible navbar on click in bootstrap5. I try to removed but after that code didnt work.
-![altjshinttesting](wireframes/testing/jshint-script-js-testing.png)
-![altjshinttesting11](wireframes/testing/jshint-script-js-testing1.png)
+- There was also one undefined bootstrap variable which was used for hide collapsible navbar on click in bootstrap5. I try to removed but after that code didnt work.
+![altjshinscriptttesting](wireframes/testing/jshint-script-js-testing.png)
+![altjshintscripttesting1](wireframes/testing/jshint-script-js-testing1.png)
+
+### maps.js testing
+In the file maps.js file static analysis tool: jshint did not show any errors as well, exept: 
+ - 2 warnings about "Do not use 'new' for side effect".
+ - 2 undefined variables: google and MarkerClusterer.
+ - 3 unused variables: markerCluster, marker, initMap
+No changes was made to these because the code have beed taken directly from the Google Maps JavaScrips API documantation and removing them or 
+modify caused more errors.
+![altjshintmaptesting](wireframes/testing/jshint-maps-js-testing.png)
 
  
 
