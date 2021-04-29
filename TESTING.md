@@ -74,7 +74,7 @@ that you should add a comment at the beginning of each js file `/*jshint esversi
 ![altjshintscripttesting1](wireframes/testing/jshint-script-js-testing1.png)
 
 ### maps.js testing
-In the file maps.js file static analysis tool: jshint did not show any errors as well, exept: 
+In the file maps.js static analysis tool: jshint did not show any errors as well, exept: 
  - 2 warnings about "Do not use 'new' for side effect".
  - 2 undefined variables: google and MarkerClusterer.
  - 3 unused variables: markerCluster, marker, initMap
@@ -82,7 +82,13 @@ No changes was made to these because the code have beed taken directly from the 
 modify caused more errors.
 ![altjshintmaptesting](wireframes/testing/jshint-maps-js-testing.png)
 
- 
+### sendEmail.js testing
+In the file sendEmail.js static analysis tool: jshint did not show any errors as well, exept:
+- 1 undefined variable: emailjs.
+- 1 unused variable: sendMail.
+No changes was made to these because the code have been taken directly thom the documantetion for EmailJS
+
+
 
 ## Testing User stories
 ---
