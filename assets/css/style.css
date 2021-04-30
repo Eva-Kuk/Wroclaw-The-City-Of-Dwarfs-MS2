@@ -71,6 +71,9 @@ h4 {
     padding-right: 0px; 
     padding-left: 5px;
 }
+.navbar-toggler:focus {
+    box-shadow: none;
+}
 #navbarNav {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -90,7 +93,6 @@ h4 {
     color: var(--text--clr);
     background-color: thistle;
 }
-
 .fa-bars::before {
     content: "\f0c9";
     font-size: 1.5rem;
@@ -122,7 +124,7 @@ h4 {
 }
 .welcome-sign {
     width: 95%;
-    background-color: var(--primary--clr); 
+    background-color: #0e0e10bd;; 
     border-radius:1.3rem; 
     padding-bottom: 22px;
     padding-top: 22px;
@@ -150,16 +152,22 @@ h4 {
       -ms-flex-align: center;
           align-items: center;
 }
-.about-margin{
+.about-margin {
     margin-top: 5rem;
 }
 
+.papa-dwarf {
+    order: 1;
+}
+.dwarf-content-order {
+    order: 2;
+}
 /*---------------ABOUT PAGE - WEATHER----------------*/
 
 .home-container {
     position: relative;
 }
-.weather-container{
+.weather-container {
     height: 250px;
     margin-top: 90px ;
     position: absolute;
@@ -192,14 +200,14 @@ h4 {
 
 /*---------------ABOUT PAGE - GALLERY----------------*/
 /*CREDIT:*/
-#gallery-container{
+#gallery-container {
     background-color: var(--text--clr);
     position: relative;
     height: 340px; 
     overflow: hidden;
     margin-bottom: 5rem;
 }
-#gallery{
+#gallery {
     position: relative;
     width: -webkit-max-content;
     width: -moz-max-content;
@@ -208,7 +216,7 @@ h4 {
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.gallery-row{
+.gallery-row {
     display: block;
     position: relative;
     -webkit-animation:linear infinite;
@@ -218,7 +226,7 @@ h4 {
     -webkit-animation-duration: 80s;
             animation-duration: 80s;
 }
-#gallery img{
+#gallery img {
     height: 160px;
     width: auto;
     padding: 5px;
@@ -254,7 +262,7 @@ h4 {
     letter-spacing: 3px;
 }
 .image-attractions {
-     /*----CREDIT: CREDIT: Photo by studio500 from Pixaby----*/
+    /*----CREDIT: CREDIT: Photo by studio500 from Pixaby----*/
     background-image: url('../images/wroclaw-roof.jpg');
     height: 200px;
 }
@@ -267,7 +275,7 @@ h4 {
    height: 400px;
     width: 100%; 
 }
-.map-buttons{
+.map-buttons {
     width: 100%;
     min-height: 200px;
     margin-bottom: 7px;
@@ -320,7 +328,7 @@ h4 {
     height: 200px;
     width: auto;
 }
-.form-control{
+.form-control {
     margin: 0.50rem;
 }
 .form-control:focus {
@@ -394,8 +402,8 @@ footer {
     padding-left:0;
 }
 
-/*---------Media for Large Devices----------*/
-@media screen and (min-width:540px){
+/*---------Media for Medium and Large Devices----------*/
+@media screen and (min-width:540px) {
     .navbar-text {
         font-size: 2.6rem;
     }
@@ -450,11 +458,12 @@ footer {
         width: 300px;
     }
 }
-@media screen and (min-width:763px){
+@media screen and (min-width:763px) {
     .welcome-sign {
         width: 60%;
     }
 }
+
  @media screen and (min-width:992px) {
     .welcome-sign {
         width: 40%;
@@ -473,5 +482,18 @@ footer {
     .btn-success {
         margin-bottom: 1.2rem;
         margin-top: 1.2rem;
+    }  
+   
+    .papa-dwarf {
+        order: 2;
+    }
+    .dwarf-content-order {
+        order: 1;
+    }
  }
- }  
+
+ /*---------Media for landscape orientation----------*/
+ @media (max-width: 768px) and (orientation: landscape){
+     .welcome-sign {
+    width: 57%;
+ }
