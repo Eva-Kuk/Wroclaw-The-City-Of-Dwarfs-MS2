@@ -66,7 +66,7 @@ function initMapAttractions() {
         },
         {
             location: {lat:51.1137, lng:17.0334}, 
-            info:"<h5>Museum of the University of Wroclaw</h5><p>The museum in  displaying many of the amazing historical objects: Aula Leopoldina, Oratorium Marianum,  Mathematical Tower</p>"
+            info:"<h5>Museum of the University of Wroclaw</h5><p>The museum is  displaying many of the amazing historical objects: Aula Leopoldina, Oratorium Marianum,  Mathematical Tower</p>"
         },
         {
             location: {lat:51.1098, lng:17.0327}, 
@@ -86,7 +86,7 @@ function initMapAttractions() {
         },
         {
             location: {lat:51.1079, lng:17.0289}, 
-            info:"<h5>The City Museum of Wroclaw</h5><p> The Royal Palace is a palace in Wrocław, Poland. Originally a palace of the Prussian monarchy, it now houses the city museum.  </p>"
+            info:"<h5>The City Museum of Wroclaw</h5><p> The Royal Palace is a palace in Wrocław, Poland. Originally a palace of the Prussian monarchy, now it houses the city museum. </p>"
         },
     ];
 // add click listener to each marker which opens the InfoWindow with attractionsMarkers info
