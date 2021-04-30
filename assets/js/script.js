@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 /* CREDIT from w3school.com and customised for slide down a footer on scroll*/
 // Footer slide down on scroll
-let prevScrollpos = window.pageYOffset;
+var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
     let currentScrollpos = window.pageYOffset;
     if (prevScrollpos > currentScrollpos) {
@@ -43,12 +43,3 @@ let weather = {
 };
 weather.fetchWeather("Wroclaw");
 
-// Hide collapsible navbar on click
-// Credit: solution taken from stackoverflow 
-const navLinks = document.querySelectorAll('.nav-item');
-const menuToggle = document.getElementById('navbarNav');
-const bsCollapse = new bootstrap.Collapse(menuToggle);
-navLinks.forEach((l) => {
-    l.addEventListener('click', () => { bsCollapse.toggle(); }
-    );
-});
