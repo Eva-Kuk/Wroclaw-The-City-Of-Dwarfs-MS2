@@ -285,7 +285,8 @@ h4 {
 .btn-success {
     color: var(--primary--clr);
     background-color:var(--secondary--clr);
-    border: 1px solid var(--primary--clr);
+  
+    border-color:  var(--primary--clr);
     border-radius: 0.25rem;
     margin-bottom: 0.25rem;
     margin-top: 0.25rem;
@@ -306,6 +307,11 @@ h4 {
     border-color:var(--primary--clr);
     -webkit-box-shadow: 0 0 0 0.25rem rgb(0 0 0 / 27%);
             box-shadow: 0 0 0 0.25rem rgb(0 0 0 / 27%);
+}
+.btn-success:not(:disabled):not(.disabled):active{
+    color:var(--primary--clr);
+    background-color:var(--text--clr);
+    border-color: var(--text--clr);
 }
 .btn span {
     font-size: 0.9rem;
@@ -369,6 +375,11 @@ h4 {
 }
 a.contact-details {
     color: var(--secondary--clr);
+}
+ .btn-primary:not(:disabled):not(.disabled):active {
+    color:var(--primary--clr);
+    background-color:var(--text--clr);
+    border-color: var(--text--clr);
 }
 
 /*-----------------FOOTER------------------*/
@@ -447,7 +458,7 @@ footer {
     {
         height: 300px;
     }
-    .map-buttons{
+  .map-buttons{
         width:80%;
         min-height: 200px; 
     }
@@ -476,14 +487,13 @@ footer {
         min-height: 200px; 
     }
     .width-size {
-        width: 65%;
+        width: 70%;
         padding-right: 20px;
     }
     .btn-success {
         margin-bottom: 1.2rem;
         margin-top: 1.2rem;
     }  
-   
     .papa-dwarf {
         order: 2;
     }
@@ -494,6 +504,8 @@ footer {
 
  /*---------Media for landscape orientation----------*/
  @media (max-width: 768px) and (orientation: landscape){
-     .welcome-sign {
-    width: 57%;
+    .welcome-sign {
+        width: 57%;
+        padding-bottom: 10px;
+        padding-top: 10px;
  }
