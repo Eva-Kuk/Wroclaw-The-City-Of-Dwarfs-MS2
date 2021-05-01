@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 /* CREDIT from w3school.com and customised for slide down a footer on scroll*/
 // Footer slide down on scroll
-var prevScrollpos = window.pageYOffset;
+let prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
     let currentScrollpos = window.pageYOffset;
     if (prevScrollpos > currentScrollpos) {
