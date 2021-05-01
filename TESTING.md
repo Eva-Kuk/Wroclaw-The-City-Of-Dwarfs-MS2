@@ -18,21 +18,21 @@
 ---
 While working on this project I encountered the following problems which I tried to solve in the following way:
 
-1. When I tried to connect the buttons to the API map, the btn-dwarfs button showed 10 errors in the dev tool.
+1. Issue with dwarf's array errors: When I tried to connect the buttons to the API map, the btn-dwarfs button showed 10 errors in the dev tool.
  The error appeared in an array where the lengths and widths were incorrectly defined, 
  instead of specifying lat and lng as an object had an additional location parameter that was not defined as specified in the code
 - SOLUTION: removing the location: property from the array
 ![altdwarfsbuttondevtoolerror](wireframes/testing/dwarf-button-devtool-errors.png)
 ![altdwarfsmarker](wireframes/testing/dwarf-markers.png)
-2. Issue with broken links. Navbar didn't respond, it didn't move to each section when clicked on individual links.
+2. Issue with broken links: Navbar didn't respond, it didn't move to each section when clicked on individual links.
  The error apeared because I implemented the solution to close dropdown menu after selecting link on navbar on small devices
   for from my previous project which worked perfectly on earlier version of bootstrap 4.6.
   bar would collapse after selecting the link on
  - SOLUTION: removing unnecessary code
 ![altnavbarissue](wireframes/testing/navbar-issue.png)
-3.  Issue with not collapsing the burger menu after removing the solution to close dropdown menu from botstrap version 4.6
+3.  Issue with not collapsing the burger menu: after removing the solution to close dropdown menu from botstrap version 4.6
 - SOLUTION: The solution was found on the Stack Overflow using a function in javascript to hide collapsible Bootstrap5 navbar on click.
-4. While testing the API weather, I noticed an 401 error displayed in google search when I tried to check the weather object for Wroclaw
+4. Issue with API weather 401 error:  While testing the API weather, I noticed an 401 error displayed in google search when I tried to check the weather object for Wroclaw
 `{
 "cod": 401,
 "message": "Invalid API key. Please see http://openweathermap.org/faq#error401 for more info."
@@ -41,6 +41,12 @@ While working on this project I encountered the following problems which I tried
 SOLUTION: The code I was using hardquoting quotes which were braking the url. It was changed using backticks. 
 I also used a Math.floor function to round a temperature number to an integer.
 ![altValidator.w3.org](wireframes/testing/fetch-weather-issue-solved.png)
+5. Issue with Bootstrap version 5: Inintially I created  this project using Bootstrap version 5 as this is the newest version. However during
+the development of the website I noticed issues with the navigation bar. Some problems like hide collapsible navbar on click 
+I resolved using the javascript function which I found on stackoverflow. Unfortunatelly more issues appeared: navigationbar menu opened when the website loads and 
+also when clicked on logo-brand. I wasn't sure how to proceed this issue. I tried to find the solution on the internet and also on the slack, given
+solution did not bring the expected result. After talking to tutor support and advice, I changed the bootstrap to version 4.6 and used the navigation
+bar from my previous project. This resulted in navigationbar menu working as intended.
 
 ## Code Validation
 ---
@@ -87,12 +93,11 @@ In the file sendEmail.js static analysis tool: jshint did not show any errors as
 - 1 undefined variable: emailjs.
 - 1 unused variable: sendMail.
 No changes was made to these because the code have been taken directly thom the documantetion for EmailJS
-
-
+![altjshintmaptesting](wireframes/testing/jshint-maps-js-testing.png)
 
 ## Testing User stories
 ---
-1. As a user, I want to navigate the site easily, so that I can find what I need effectively.
+1.As a user, I want to navigate the site easily, so that I can find what I need effectively.
 - No matter what page the user lands on, they can easily find and use navigation bar which also  is set fixed, being available all times.
 - The logo image always leads back to the home page.
 ![althomepage](wireframes/testing/home-page.png)
@@ -116,31 +121,24 @@ a little description about dwarfs
 ![altaboutpage1](wireframes/testing/about-page1.png)
 ![altaboutpage2](wireframes/testing/about-page2.png)
 ![altaboutpage3](wireframes/testing/about-page3.png)
-5. As a user, I want to use interactive elements on the website
 
-6. As a user, I want to have an access to the map of the city with various places, so I can visually 
-see the location of places.
+5. As a user, I want to have an access to the map of the city with various places, so I can visually see their location.   
 - On the Attractions page there is a map with 4 buttons: Attractions button, Food&Drinks button, Accomodation button, Dwarf's button with selected places for each button.
 When pressed on each button, it shows their location on the map with a name of the place and the short description.
 ![altattractionspage](wireframes/testing/attractions-page.png)
 
-7. As a user, I want to be able to contact the site owner, so I will be able to share my feetback regardling 
-the website or ask about my planned visit and get some more advices and recomendations.
+6. As a user, I want to be able to contact the site owner, so I will be able to share my feetback regardling the website or ask about planning my visit and get some more advice and recomendations.
 - On the contact page there is a contact form which user can fill in send. The contact form is connected using EmailJS servics which allows users
 to send their email directly without using the server. Iit was used the allert as interactive custom modal popup window when a usersubmits a contact form.
 Depending on if the user puts data in the form it will display success or error note.
 ![altcontactpage](wireframes/testing/contact-page.png)
 ![altcontactemailsuccesssign](wireframes/testing/contact-email-success-sign.png)
 
-
-
-8. As a user, I want to easily understand the purpose of their site.
+7.  As a user, I want to easily understand the purpose of this site.
   - When user lands on the website the jumbotron welcome sign describes the website's purpose 
 ![altwelcomesign](wireframes/testing/welcome-sign.png)
 
 ## Testing Functionality
----
-
 
 ### Checking for broken links
 ---
@@ -150,8 +148,12 @@ Depending on if the user puts data in the form it will display success or error 
 ---
 
 
+ **Encountered problems while testing the site on different devices**
+ ---
+
 ## Testing Compatibility
 ---
+
 
 ## Testing Performance
 ---
@@ -164,5 +166,4 @@ Depending on if the user puts data in the form it will display success or error 
 
 
 ### Overflow
-
 
