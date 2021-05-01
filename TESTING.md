@@ -18,7 +18,7 @@
 ---
 While working on this project I encountered the following problems which I tried to solve in the following way:
 
-1. Issue with dwarf's array errors: When I tried to connect the buttons to the API map, the btn-dwarfs button showed 10 errors in the dev tool.
+1. Issue with dwarf's array: When I tried to connect the buttons to the API map, the "btn-dwarfs" button showed 10 errors in the dev tool.
  The error appeared in an array where the lengths and widths were incorrectly defined, 
  instead of specifying lat and lng as an object had an additional location parameter that was not defined as specified in the code
 - SOLUTION: removing the location: property from the array
@@ -77,10 +77,11 @@ I found the solution on the [stackoverflow](https://stackoverflow.com/questions/
 that you should add a comment at the beginning of each js file `/*jshint esversion: 6 */` which worked.
 - There was also one undefined bootstrap variable which was used for hide collapsible navbar on click in bootstrap5. I try to removed but after that code didnt work.
 ![altjshinscriptttesting](wireframes/testing/jshint-script-js-testing.png)
+- Came out with no errors or warnings
 ![altjshintscripttesting1](wireframes/testing/jshint-script-js-testing1.png)
 
 ### maps.js testing
-In the file maps.js static analysis tool: jshint did not show any errors as well, exept: 
+In the file maps.js static analysis tool: jshint did not show any errors, exept: 
  - 2 warnings about "Do not use 'new' for side effect".
  - 2 undefined variables: google and MarkerClusterer.
  - 3 unused variables: markerCluster, marker, initMap
@@ -89,7 +90,7 @@ modify caused more errors.
 ![altjshintmaptesting](wireframes/testing/jshint-maps-js-testing.png)
 
 ### sendEmail.js testing
-In the file sendEmail.js static analysis tool: jshint did not show any errors as well, exept:
+In the file sendEmail.js static analysis tool: jshint did not show any errors or warnings, exept:
 - 1 undefined variable: emailjs.
 - 1 unused variable: sendMail.
 No changes was made to these because the code have been taken directly thom the documantetion for EmailJS
@@ -135,29 +136,82 @@ Depending on if the user puts data in the form it will display success or error 
 ![altcontactemailsuccesssign](wireframes/testing/contact-email-success-sign.png)
 
 7.  As a user, I want to easily understand the purpose of this site.
-  - When user lands on the website the jumbotron welcome sign describes the website's purpose 
+  - When user lands on the website the jumbotron welcome sign describes the website's purpose .
+  - A hero image , placed on the home page gives a first glimpse on the website's content and purpose.
+  - Strategically placed as logo name of the website also indicates what is the website's purpose.
 ![altwelcomesign](wireframes/testing/welcome-sign.png)
 
 ## Testing Functionality
-
+Comprehensive testing has been carried out. They are discussed in more detail in the table below:
 ### Checking for broken links
 ---
-
+- A full screen overlay navigation is fully functional and responsive on different devices.
+- All the nav links on the navigation bar goes to the expected section.
+- When hover over each navigationlink, it changes the color correctly
 
 ### Responsive Design
 ---
-
+- The website has been tested by using [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) 
+  and also on [Am I Responsive](http://ami.responsivedesign.is/) and [Responsinator](http://www.responsinator.com/) 
+  on a number of devices with varying screen dimensions, for both portraits and landscape including iPhone 5/SE,
+  iPhone 6/7/8, iPhone 6/7/8 plus, iPhone 11, iPad, iPad Pro, Moto G4, Galaxy S5, Surface Duo,
+  Galaxy Fold, Widescreen Laptop and Desktop PC, iPad landscape · width: 1024px,  iPhone 6-8 Plump landscape 
+· width: 736px ,iPhone 6-8 landscape · width: 667px, Android (Pixel 2) landscape · width: 684px, iPhone eXpensive landscape · width: 734px
+      
+- The website was also tested on real devices both portrait and landscape. The result on the other browsers was satisfying:
+    - Samung Galaxy S6/S7/S8/S10.
+    - iPad Air.
+    - iphone 7.
+    - Samsung Galaxy Tablet.
 
  **Encountered problems while testing the site on different devices**
- ---
+ - Google Maps info window "Wroclaw" did not show on mobile devices. initially, the info window was set to appear on the marker on mouseover, 
+ since hoverstyles doesn't exist on touch devices this funcion didn't work
+ Fixed by changing the marker.addlistener from "mouseover" to "click"
+![altinfowindowwroclaw](wireframes/testing/info-window-wroclaw-fix.png)
+![altinfowindowwroclaw](wireframes/testing/info-window-wroclaw.png)
+
+ - For devices with landscape orientation the the welcome sign on the Home section were to close together which was causing bad UX 
+ Fixed by adding media querry for landscapes orientation
+![altmediaquerylandscapedevfix](wireframes/testing/media-query-landscape-devices-fix.png)
+![altmediaquerylandscapedev](wireframes/testing/media-query-landscape-devices.png)
 
 ## Testing Compatibility
 ---
+The website was tested on the following browsers and operating systems:
 
+- Google Chrome (Windows 10, Android 11, Linux).    
+- Microsoft Edge (Windows 10).
+- Safari.
+- Firefox (Windows 10).
+- Opera (Windows 10, Linux).
+- Internet Explorer 11 was checked on [BrowserLing](https://www.browserling.com/)
 
+    - Test for Opera browser
+    ![altbrowsersopera](wireframes/testing/browsers-opera.png)
+    ![altbrowsersopera](wireframes/testing/browsers-opera1.png)
+
+    - Test for Firefox browser
+    ![altbrowserafirefox](wireframes/testing/browsers-firefox.png)
+    ![altlbrowsersfirefox1](wireframes/testing/browsers-firefox1.png)
+
+    - Test for Microsoft Edge browser
+    ![altbrowsersmsedge](wireframes/testing/browsers-microsoft-edge.png)
+    ![altbrowsersmsedge1](wireframes/testing/browsers-microsoft-edge1.png)
+
+   
+
+---
 ## Testing Performance
 ---
+Performance has been tested using Lighthouse tool of Google Chrome. The results were a little bit different every time due to device performance and value estimation .
+The results on the end were satisfying for desktop devices bit performance of mobile devices need to be revieved and tested again. There were some issues which needed to be fixed:
 
+-  **Test for desktop devices**
+![altlighthousetest](wireframes/testing/lighthouse-test-desktop.jpg)
+
+- **Test for mobile devices**
+![altlighthousetest](wireframes/testing/lighthouse-test-mobile.jpg)
 
 ## Testing Accessibility
 ----
@@ -166,4 +220,7 @@ Depending on if the user puts data in the form it will display success or error 
 
 
 ### Overflow
+- The website was tested for overflow using [Unicorn Revealer](https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln?hl=en-GB) chrome extension. 
+- Spelling was checked thoroughly using [Grammarly](https://app.grammarly.com/) extention and [online-spellcheck](https://www.online-spellcheck.com/)
+
 
