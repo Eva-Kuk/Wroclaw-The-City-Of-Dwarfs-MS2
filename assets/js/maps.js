@@ -19,7 +19,7 @@ function initMap(){
         content:'<h4>Wroclaw</h4>',
     });
 
-    marker.addListener('mouseover', () => {
+    marker.addListener('click', () => {
         infoWindow.open(map, marker);
     });
 
