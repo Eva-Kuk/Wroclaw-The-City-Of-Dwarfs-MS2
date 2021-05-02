@@ -374,7 +374,7 @@ h4 {
     margin-bottom:80px;
 }
 a.contact-details {
-    color: var(--secondary--clr);
+    color: #A80000;
 }
  .btn-primary:not(:disabled):not(.disabled):active {
     color:var(--primary--clr);
