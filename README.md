@@ -19,14 +19,14 @@
 ![altamiresponsive](wireframes/testing/am-i-responsive.jpg)
 
 
-A live demo can be found [here](https://https://github.com/Eva-Kuk/Wroclaw-The-City-Of-Dwarfs-MS2/)
+A live demo can be found [here](https://eva-kuk.github.io/Wroclaw-The-City-Of-Dwarfs-MS2/)
 
 
 ## Overview
 ---
 - This is my second Milestone 2 project which is part of the Code Isntitute's FullStack Software Development Diploma Course.
- This project demonstrates the skills and knowledge of using the HTML5, CSS, Javascript and API with an additional framework
-  Bootstrap in Interactive frontend Development module which I have learned recently on the course.
+This project demonstrates the skills and knowledge of using the HTML5, CSS, Javascript and API with an additional framework
+Bootstrap in Interactive frontend Development module which I have learned recently on the course.
 - Wrocław the city of dwarfs is an interactive guide of a Polish city located in the south-west of Poland. 
 The aim of this guide-website is to present the tourist attractions, including the small Wroclaw dwarfs that have settled in this city for good, 
 as well as the accommodation and gastromomy facilities offered by the city. This website was created to encourage everyone to visit this 
@@ -36,19 +36,19 @@ beautiful city and enjoy its charms.
 ## User stories
 ---
 1. As a user, I want to navigate the site easily, so that I can find what I need effectively.
-2. As a user, I want to be able to acces the website on a desktop and also mobile devices, so that I won't be restricted from which device I can access the site. 
+2. As a user, I want to be able to access the website on a desktop and also mobile devices, so that I won't be restricted from which device I can access the site. 
 3. As a user, I want to be able to follow or connect with the owner of the website on social media, so I can get more information about the city.
 4. As a user, I would like to know what the city has to offer, so that I can adjust it to my needs and interests.
 5. As a user, I want to have an access to the map of the city with various places, so I can visually see their location.   
-6. As a user, I want to be able to contact the site owner, so I will be able to share my feetback regardling the website or ask about planning my visit and get some more advice and recomendations.
+6. As a user, I want to be able to contact the site owner, so I will be able to share my feedback regarding the website or ask about planning my visit and get some more advice and recomendations.
 7. As a user, I want to easily understand the purpose of this site.
 
 
 ## UX
 ---
 This website design will target tourists of all ages, families with children and friends who are looking for the next city break destination,
- as those intedend to visit Poland. The main purpose of this project was to create and interactive guide website with easy and quick access to
- information about the city by prezenting main attractions, accomodation and gastronomy facilities, displayed on the map, where visitors can search 
+ as those intedended to visit Poland. The main purpose of this project was to create and interactive guide website with easy and quick access to
+ information about the city by presenting main attractions, accomodation and gastronomy facilities, displayed on the map, where visitors can search 
  the options of their interest. It will present the main attractions of Wroclaw, the family of small dwarfs that have settled in Wroclaw for good.
  It can be a great activity not only for children but also for adults who may want to find them all while exploring this amazing city.
 
@@ -59,19 +59,19 @@ My goal for this project is to promote the Wroclaw as the next city break destin
  the UX simple, clean and user-friendly site design. 
  
 ### Project purpose:
-- To create easier trip planning to Wroclaw , by providing useful and helpfull information about the city.
+- To create easier trip planning to Wroclaw , by providing useful and helpful information about the city.
 - To promote places which are great for short term destination but may not always be concidered.
 
 ### Site owner goals:
 - Promote Wroclaw and encourage tourists to visit and explore this lovely city.
-- Provide a usefull information about the city and demonstrate various activities, accomodation, and places to eat 
+- Provide a useful information about the city and demonstrate various activities, accomodation, and places to eat 
   which may suit the visitors needs and budget. 
 - Provide the contact form, so the users be able to get in touch with their queries in relation to their trip.
 - Include user friendly map with various attractions, accomodations and gastronomy facilities.
 - Include current information about the weather.
 
 ### Customer Goals:
-- Easy to find informations about attractions , accomodation, and gastronomy facilities of the city.
+- Easy to find information about attractions , accomodation, and gastronomy facilities of the city.
 - Designed with priority of mobile devices as this it the most common way of searching for information.
 - Easy to find links to social media accounts to follow the news about the city.
 - Easy to find contact form for possible enquiries about the city.
@@ -91,7 +91,7 @@ My goal for this project is to promote the Wroclaw as the next city break destin
 **3. Structure**
 - The purpose of the Structure has been created as a single page website containing sections for each page and enables users to quickly navigate through the website, 
 easily assimilate useful information and have an overview of the attractions, accommodation, facilities.
-- The first page will consist of a large hero image amd an animated welcome sign will appear after loading page and also navigation bar which is transparent will change
+- The first page will consist of a large hero image and an animated welcome sign will appear after loading page and also navigation bar which is transparent will change
  to dark after scroll so the user can see the full image first.
 - The second about page will contain information about the city, the story about the dwarf and also useful information about the Polish currency and the current weather 
 in Poland. At the end of the page there will be an interactive gallery of dwarf's.
@@ -123,7 +123,7 @@ The welcome sign initially set as hidden and which appears after the page load a
 
 **ABOUT PAGE FINAL RESULT**
 
-Initially, in the about section, there suposed to be a curency showing images with Polish coins,
+Initially, in the about section, there suposed to be a currency showing images with Polish coins,
 which would change to tails after pressing the button, however I decided against it.
 I also decided to move the weather to home page and have it as current one day weather.
 
@@ -148,13 +148,13 @@ I also decided to move the weather to home page and have it as current one day w
 - When choosing the colors, I wanted to refer to the national white and red Polish flag. Cinnabar is the current 
 color of the flag and to which I have chosen a slightly more subdued shade of white and complemented it with 
 shades of black and gray, which will give a website a balanced contrast. 
-- As a primary color, I have chosen the color Ritch Black FORGA 39 (0E0E10) which has some small tonal 
+- As a primary color, I have chosen the color Rich Black FORGA 39 (0E0E10) which has some small tonal 
 changes from a normal black color and it will be used for navigation bar, footer and font-color of the website. 
 - As an additional color, I have chosen Cinnabar (E34234) which will be used for buttons and ON/OFF Switch 
 used for reversing buttons. This color will emphasise the important buttons for contact/sentand and they will be noticed by the user immediately.
 - For the background I have chosen a Lavender Gray (C7C7D1) and for text on navbar and footer 
 I have chosen off-white named Cultured (F4F4F6). Both colors belong to the same color palette as 
-Ritch Black FORGA 39. These colors work very well also with the images.
+Rich Black FORGA 39. These colors work very well also with the images.
 
   ![altcolorspalette](wireframes/testing/color-palette.png)
  
@@ -170,14 +170,14 @@ as well as being visually pleasing. It is a popular pairing font with "Just Anot
 
 
  **Images**
-- The image selection has been chosen very carefuly to present the beauty of Wroclaw city and its main attraction - the Dwarfs which settled in there for good. The photos presentation shows potential tourists the attractiveness of the city
+- The image selection has been chosen very carefully to present the beauty of Wroclaw city and its main attraction - the Dwarfs which settled in there for good. The photos presentation shows potential tourists the attractiveness of the city
 - The hero image was chosen to give the site a little bit fairy-tale character as the main attractions of this city are in fact dwarfs and overall fairy-tale scenery.
 
 
 ## Features
 ---
 **Existing Features**
-- It is a fully responsive website hat allows the user to use it on any device
+- It is a fully responsive website hat allows the user to use it on any device.
 - Designed with HTML, CSS, Java Script and Bootstrap.
 - One page with 4 sections acting as individual pages.
 
@@ -195,14 +195,14 @@ allows user to easily navigate, regardless of which page is visited and also giv
 - The icons change from white to red which refers to the Polish flag.
 
 #### Home Page:
-- A background hero-image presented to the user takes 100% of the screen
+- A background hero-image presented to the user takes 100% of the screen.
 - A welcome sign appears in the middle of the website after the website is loaded.
-- An API weather on the left top corner which shows the current temperature in Wroclaw
+- An API weather on the left top corner which shows the current temperature in Wroclaw.
 
 #### About Page:
-- An interactive gallery moving from side to side,
+- An interactive gallery moving from side to side.
 - The set of coins has On/Off switch which user can reverse to see heads and tails (unfortunately, I couold not apply this idea as available images with coins were not of a suitable quality).
-- Three days weather option was changed to one day weather and moved to home page
+- Three days weather option was changed to one day weather and moved to home page.
 
 #### Attractions Page:
 - The markers with Attractions, Accommodations, Restaurants/Bubs/Bars and Dwarf's are visible on Google interactive map and each option shows a brief description when clicked.
@@ -211,7 +211,7 @@ allows user to easily navigate, regardless of which page is visited and also giv
 #### Contact Page
 - A contact form with message space and send button is displayed for potential enquiries.
 - Contact phone number is also provided in case the user prefers to make a call.
-- A send button chenges from red to white when hovered over, referenced to the polish flag colours.
+- A send button changes from red to white when hovered over, referenced to the polish flag colours.
 
 ### HOME PAGE
 ![althomepage](wireframes/testing/home-page.png)
@@ -229,21 +229,22 @@ allows user to easily navigate, regardless of which page is visited and also giv
 
 **Features Left to Implement when skills develop**
 Another feature idea
-- The set of coins has On/Off switch which user cane reverse to see heads and tails
-- An curency options for the user so they can check and calulate their actual curency.
-- Skyskanner API for displaying flights from different locations which wil consist an information od destinations, aerline and price.
+- The set of coins has On/Off switch which user cane reverse to see heads and tails.
+- An currency options for the user so they can check and calulate their actual currency.
+- Skyskanner API for displaying flights from different locations which will consist an information of destinations, airline and price.
 - An event calendar section.
 - Connect the contact form with backend server.
+- Make the Attractions section more decriptive with a list off all attractions appearing on the page.
 ---
 
 ## Technologies Used
 
 
 **1. Languages**
-- [HTML5](https://en.wikipedia.org/wiki/HTML5) - the current standard that is used
-- [CSS3](https://en.wikipedia.org/wiki/CSS) - the current standard that is used
-- [CSS3](https://en.wikipedia.org/wiki/JavaScript) - the current standard that is used
-- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [HTML5](https://en.wikipedia.org/wiki/HTML5) - the current standard that is used.
+- [CSS3](https://en.wikipedia.org/wiki/CSS) - the current standard that is used.
+- [CSS3](https://en.wikipedia.org/wiki/JavaScript) - the current standard that is used.
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript).
 
 **2. Integrations**
 - [Bootstrap](https://getbootstrap.com/) - by linking via Bootstrap CDN to HTML Doc making the design responsive. 
@@ -272,7 +273,7 @@ This site uses following APIs:
 - [GitHub](https://github.com/) - A cloud-based hosting service to manage my Git repositories.
   
 **5. Other**
-- [Photoshop](https://www.photoshop.com/en) - for photo editing
+- [Photoshop](https://www.photoshop.com/en) - for photo editing.
 
 **5. IDE Extensions used in GitPod**
 - Auto Close Tag
@@ -287,23 +288,23 @@ This site uses following APIs:
 - [Code Institute Course Content](https://courses.codeinstitute.net/login) -Main source of fundamental knowledge.
 - Code Institute SLACK Community - Source of assistance.
 - [Balsamic](https://balsamiq.com/wireframes/) - Wireframing design tool to create wireframes.
-- [Responsinator](http://www.responsinator.com/) - Responsive website mockup image generator.
+- [Responsinator](http://www.responsinator.com/) - Responsive website mock up image generator.
 - [Am I Responsive?](http://ami.responsivedesign.is/) - used to check how the website will look on different devices.
 - [Autoprefixer](https://autoprefixer.github.io/) - used to add vendor prefixes.
 - [Balsamiq Wireframe](https://balsamiq.com/wireframes/) - used to create wireframes for planning project structure and layout.
-- [Gooogle chrome developper tools](https://developer.chrome.com/docs/devtools/) - used to check page elements, help debug issues with the site layout and test different CSS styles and console JS.
+- [Google chrome developer tools](https://developer.chrome.com/docs/devtools/) - used to check page elements, help debug issues with the site layout and test different CSS styles and console JS.
 - [w3schools](https://www.w3schools.com/) - used as general source of knowledge.
 - [Stack Overflow](https://stackoverflow.com/) - used as general source of knowledge.
-- [Stock Free Images](https://www.stockfreeimages.com/87864301/Papa-Krasnal-gnome.html) resourse for images (papa dwarf). 
-- [Tripadvisor](https://www.tripadvisor.ie/) - resourse for Accomodation and FOOD and Drinks in Attractions section.
-- [google.com/travel](https://www.google.com/travel/hotels/Wroc%C5%82aw) - resourse for Attractions section.
+- [Stock Free Images](https://www.stockfreeimages.com/87864301/Papa-Krasnal-gnome.html) resource for images (papa dwarf). 
+- [Tripadvisor](https://www.tripadvisor.ie/) - resource for Accomodation and FOOD and Drinks in Attractions section.
+- [google.com/travel](https://www.google.com/travel/hotels/Wroc%C5%82aw) - resource for Attractions section.
 - [Podroze po europie](https://www.podrozepoeuropie.pl/ostrow-tumski-wroclaw/) - polish website tor the information about the attractions in the city.
 - [Wikipedia](https://en.wikipedia.org) - resourse for information about the attractions in Wroclaw .
-- [Wikipedia/dwarfs](https://pl.wikipedia.org/wiki/Wroc%C5%82awskie_krasnale) - resourse about dwarfs localizations.
-- [Visit Wroclaw](https://visitwroclaw.eu/en) - polish website for the attracion secion content.
-- [Kolejkowo ](https://kolejkowo.pl/) - polish website for the attracion section.
+- [Wikipedia/dwarfs](https://pl.wikipedia.org/wiki/Wroc%C5%82awskie_krasnale) - resource about dwarfs localization.
+- [Visit Wroclaw](https://visitwroclaw.eu/en) - polish website for the attracion section content.
+- [Kolejkowo ](https://kolejkowo.pl/) - polish website for the attraction section.
 - [Colors](https://coolors.co/) - color schemes generator.
-- [Contrasr checker](https://webaim.org/resources/contrastchecker/) -contrast color checker.
+- [Contrast checker](https://webaim.org/resources/contrastchecker/) -contrast color checker.
 - [TinyPNG](https://tinypng.com/) - Efficient compression of images for site.
 - [Favicon.io](https://www.favicon.io/) -  to convert an image into a favicon.
 - [Grammarly](https://www.grammarly.com/) - used to help with grammar check.
@@ -328,7 +329,6 @@ Overview
 - HTML - [Markup Validation W3C Service](https://validator.w3.org/)
 - CSS - [Jigsaw  Validation W3C Service](https://jigsaw.w3.org/css-validator/)
 - JSHint - [JSHint for detecting errors in JavaScript code](https://jshint.com/)
-- JS Lint - [JavaScript checking](https://jslint.com/)
 - Link checker - [Check links and anchors in Web pages or full Web sites](https://validator.w3.org/checklink)
 - Lighthouse in Google dev tool for testing the performance of the website
 ---
@@ -402,13 +402,13 @@ Change the current working directory to the location where you want the cloned d
 
 **Media**
 Almost all pictures were downloaded from [pixaby](https://pixabay.com/). 
-The photo of the logo as well as the papa-dwarf which was downloaded from [Stock Free Images](https://www.stockfreeimages.com/87864301/Papa-Krasnal-gnome.html)
+The photo of the logo and the papa-dwarf image was downloaded from [Stock Free Images](https://www.stockfreeimages.com/87864301/Papa-Krasnal-gnome.html).
 were modified by me in photoshop for the needs of the project.
 
 **Content**
 - [Visit Wroclaw](https://visitwroclaw.eu/en) - content for the attractions section markers.
 - [turystyka dla studenta](https://turystyka.dlastudenta.pl/miejscowosc/Wroclaw/Opis/ca42-1-1.html#:~:text=Wroc%C5%82aw%2C%20stolica%20Dolnego%20%C5%9Al%C4%85ska%2C%20jest,wpisana%20jest%20w%20jego%20mury.) - content for the attraction section about Wroclaw.
-- [Wikipedia](https://en.wikipedia.org/wiki/Wroc%C5%82aw%27s_dwarfs) - description of the dwarfs and their location latitude nad longtitude.
+- [Wikipedia](https://en.wikipedia.org/wiki/Wroc%C5%82aw%27s_dwarfs) - description of the dwarfs and their location latitude and longtitude.
 - [Tripadvisor](https://www.tripadvisor.ie/Tourism-g274812-Wroclaw_Lower_Silesia_Province_Southern_Poland-Vacations.html) - looking for best restaurants, accommodation, attractions and description.
 
 **Code Snippets**
@@ -426,4 +426,4 @@ were modified by me in photoshop for the needs of the project.
 I would like to thank:
 - My mentor Aaron Sinnott for his helpful and valuable feedback and guidance.
 - Tutor support at Code Institute, for funtastic support and help with my technical questions.
-- Slack community especially Simen Daehlin Eventyret_Mentor for their suggestions and support.
+- Slack community for their suggestions and support.
