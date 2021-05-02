@@ -143,6 +143,9 @@ Depending on if the user puts data in the form it will display success or error 
 
 ## Testing Functionality
 Comprehensive testing has been carried out. They are discussed in more detail in the table below:
+![alttestingtable1](wireframes/testing/testing-table1.png)
+![alttestingtable2](wireframes/testing/testing-table2.png)
+![alttestingtable3](wireframes/testing/testing-table3.png)
 ### Checking for broken links
 ---
 - A full screen overlay navigation is fully functional and responsive on different devices.
@@ -189,15 +192,13 @@ The website was tested on the following browsers and operating systems:
 
     - Test for Opera browser
     ![altbrowsersopera](wireframes/testing/browsers-opera.png)
-    ![altbrowsersopera](wireframes/testing/browsers-opera1.png)
 
     - Test for Firefox browser
     ![altbrowserafirefox](wireframes/testing/browsers-firefox.png)
-    ![altlbrowsersfirefox1](wireframes/testing/browsers-firefox1.png)
 
     - Test for Microsoft Edge browser
     ![altbrowsersmsedge](wireframes/testing/browsers-microsoft-edge.png)
-    ![altbrowsersmsedge1](wireframes/testing/browsers-microsoft-edge1.png)
+   
 
    
 
@@ -205,8 +206,19 @@ The website was tested on the following browsers and operating systems:
 ## Testing Performance
 ---
 Performance has been tested using Lighthouse tool of Google Chrome. The results were a little bit different every time due to device performance and value estimation .
-The results on the end were satisfying for desktop devices bit performance of mobile devices need to be revieved and tested again. There were some issues which needed to be fixed:
+The results on the end were satisfying for desktop devices bit performance of mobile devices need to be revieved and tested again.
+There were some issues which needed to be fixed:
+PERFORMANCE: 
+- Properly sized images - all images has been resized in Photoshop and compressed in [TinyPNG](https://tinypng.com/)
 
+BEST PRACTICES:
+- Serves images with low resolution - applies to the PNG image that loads from the openweather API
+
+ACCESIBILITY:
+- Background and foreground colors do not have a sufficient contrast ratio - checked color in [contrast checker](https://webaim.org/resources/contrastchecker/)
+for `a.contact-details` in css.style and slightly change the redish color to meet the requirements.
+- Usage of ARIA showed  <div role="button"> in marker for "Wroclaw" on the map. I read on the  [web.dev](https://web.dev/semantics-and-screen-readers/#use-semantic-html) as best practice is use the element of <button> 
+than <div> with the attribute `role="button`. However I can't change it as this code was set by the google map API.
 -  **Test for desktop devices**
 ![altlighthousetest](wireframes/testing/lighthouse-test-desktop.jpg)
 
