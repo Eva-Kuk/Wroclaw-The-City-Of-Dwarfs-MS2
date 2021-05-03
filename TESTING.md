@@ -152,6 +152,7 @@ Depending on if the user puts data in the form it will display success message
 
 Comprehensive testing has been carried out. They are discussed in more detail in the table below:
 ![alttestingtable1](wireframes/testing/testing-table1.png)
+![alttestingtable1](wireframes/testing/testing-table4.png)
 ![alttestingtable2](wireframes/testing/testing-table2.png)
 ![alttestingtable3](wireframes/testing/testing-table3.png)
 
@@ -195,7 +196,7 @@ The website was tested on the following browsers and operating systems:
 - Google Chrome (Windows 10, Android 11, Linux).    
 - Microsoft Edge (Windows 10).
 - Safari.
-- Firefox (Windows 10).
+- Firefox (Windows 10, Linux).
 - Opera (Windows 10, Linux).
 - Internet Explorer 11 was checked on [BrowserLing](https://www.browserling.com/).
 
