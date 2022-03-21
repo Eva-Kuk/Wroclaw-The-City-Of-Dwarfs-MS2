@@ -47,10 +47,10 @@ While working on this project I encountered the following problems which I tried
 I also used a Math.floor function to round a temperature number to an integer.
 ![altValidator.w3.org](wireframes/testing/fetch-weather-issue-solved.png)
 
-5. Issue with Bootstrap version 5: Inintially I created  this project using Bootstrap version 5 as this is the newest version. 
+5. Issue with Bootstrap version 5: Initially I created  this project using Bootstrap version 5 as this is the newest version. 
 However during the development of the website I noticed issues with the navigation bar. Some issues like hide collapsible navbar on click 
-I resolved by using the javascript function founded on stackoverflow. Unfortunatelly more issues appeared: navigation bar menu opened when the website loaded and 
-also when clicked on logo-brand. I wasn't sure how to resolve this issue. I tried to find the answer to this on the internet and also on the slack, but unfortunatelly given
+I resolved by using the JavaScript function founded on stackoverflow. Unfortunately more issues appeared: navigation bar menu opened when the website loaded and 
+also when clicked on logo-brand. I wasn't sure how to resolve this issue. I tried to find the answer to this on the internet and also on the slack, but unfortunately given
 solution did not bring the expected result. After talking to tutor support and advice, I have changed the bootstrap 5 to version 4.6 and used the navigation
 bar from my previous project. This resulted in navigation bar menu working as intended.
 
@@ -59,7 +59,7 @@ bar from my previous project. This resulted in navigation bar menu working as in
 1. used [W3C Markup Validation Service HTML](https://validator.w3.org/) to validate my HTML code for both pages index.html and gallery.html. 
 ![altValidator.w3.org](wireframes/testing/validator-w3-org.png)
 Initially, the validator displayed 2 warnings as shown below but these have been fixed.
-- **Warning:** The type attribute is unnececary for Java Script rources.
+- **Warning:** The type attribute is unnecessary for Java Script rources.
 ![altvalidatorhtml](wireframes/testing/validator-html.png)
 - FIXED - I found the solution on the website [webmasterworld](https://www.webmasterworld.com/javascript/4879097.htm)
 to delete type attribute from the code: type="text/javascript"
@@ -96,7 +96,7 @@ In the file maps.js static analysis tool: jshint did not show any errors, except
  - 2 warnings about "Do not use 'new' for side effect".
  - 2 undefined variables: google and MarkerClusterer.
  - 3 unused variables: markerCluster, marker, initMap.
-No changes was made to these because the code have been taken directly from the Google Maps JavaScrips API documantation and removing them or 
+No changes was made to these because the code have been taken directly from the Google Maps JavaScrips API documentation and removing them or 
 modify caused more errors.
 ![altjshintmapstesting](wireframes/testing/jshint-maps-js-testing.png)
 
@@ -104,7 +104,7 @@ modify caused more errors.
 In the file sendEmail.js static analysis tool: jshint did not show any errors or warnings, except:
 - 1 undefined variable: emailjs.
 - 1 unused variable: sendMail.
-No changes was made to these because the code have been taken directly from the documantetion for EmailJS.
+No changes was made to these because the code have been taken directly from the documentation for EmailJS.
 ![altjshintsendemailtesting](wireframes/testing/jshint-sendemail-js-testing.png)
 
 ## Testing User stories
@@ -118,8 +118,8 @@ No changes was made to these because the code have been taken directly from the 
 
 2. As a user, I want to be able to access the website on a desktop and also mobile devices, so that I won't be restricted from which device I can access the site. 
 - The website is responsive and tested on various devices as well as operating systems.
-- The footer is hidden on scroll to be able to display the larger website, expecially on smaller devices.
-The Attractions page include the main attractions of the city, variious types of accommodation in 
+- The footer is hidden on scroll to be able to display the larger website, especially on smaller devices.
+The Attractions page include the main attractions of the city, various types of accommodation in 
 various price ranges and restaurants/pubs/bars where traditional Polish food is served. There is also location and 
 a little description about dwarfs.
 - An animated gallery containing pictures of some dwarfs has been added to the website to give a user/future visitor example of little dwarfs.
@@ -128,13 +128,13 @@ a little description about dwarfs.
 ![altaboutpage3](wireframes/testing/about-page3.png)
 
 5. As a user, I want to have an access to the map of the city with various places, so I can visually see their location.   
-- On the Attractions page there is a map containing 4 buttons: Attractions button, Food&Drinks button, Accomodation button, Dwarf's button with selected places for each button.
+- On the Attractions page there is a map containing 4 buttons: Attractions button, Food&Drinks button, , Accommodation button, Dwarf's button with selected places for each button.
 When pressed on each button, it shows their location on the map with a name of the place and the short description.
 
 ![altattractionspage](wireframes/testing/attractions-page.png)
 
 6. As a user, I want to be able to contact the site owner, so I will be able to share my feedback regarding the website or ask about planning my visit 
-and get some more advice and recomendations.
+and get some more advice and recommendations.
 - On the Contact page there is a contact form which user can fill in and send. The contact form is connected using EmailJS service which allows users
 to send their email directly without using the server. The alert is used as interactive custom modal popup window when a user submits a contact form.
 Once the uses puts correct data in the form it will display success message 
@@ -183,7 +183,7 @@ Comprehensive testing has been carried out. They are discussed in more detail in
 
  **Encountered problems while testing the site on different devices**
  - Google Maps info window "Wroclaw" did not show on mobile devices. Initially, the info window was set to appear on the marker on mouseover, 
-   since hoverstyles doesn't exist on touch devices this funcion didn't work.
+   since hover styles doesn't exist on touch devices this function didn't work.
    **Fixed:** by changing the `marker.addlistener` from `mouseover` to `click`.
 
 ![altinfowindowwroclaw](wireframes/testing/info-window-wroclaw-fix.png)
@@ -243,7 +243,7 @@ than <div> with the attribute `role="button`. However I can't change it as this 
 
 ## Testing Accessibility
 ----
-The website's accessibility was also tested using Lighthouse. The test result was satysfying.
+The website's accessibility was also tested using Lighthouse. The test result was satisfying.
 
 - **Accessibility for mobile devices on LightHouse**
 ![altlighthousetest](wireframes/testing/lighthouse-mobile-accessibility.png)
